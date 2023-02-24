@@ -42,7 +42,7 @@
 */
 
 #include "mcc_generated_files/mcc.h"
-
+#include "measure.h"
 /*
                          Main application
  */
@@ -70,6 +70,7 @@ void main(void)
     while (1)
     {
         // Add your application code
+        uint16_t voltage = measure_voltage();
     }
 }
 /**

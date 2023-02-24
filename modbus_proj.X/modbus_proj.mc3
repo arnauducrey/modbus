@@ -408,11 +408,11 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="INTERNAL OSCILLATOR" name="CurrentCpuDivString"/>
-         <value></value>
+         <value/>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="INTERNAL OSCILLATOR" name="CurrentPllString"/>
-         <value></value>
+         <value/>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="INTERNAL OSCILLATOR" name="CurrentSystemClockInHz"/>
@@ -4875,19 +4875,7 @@
          <value>131.07200</value>
       </entry>
    </tokenMap>
-   <generatedFileHashHistoryMap class="java.util.HashMap">
-      <entry>
-         <file>mcc_generated_files\mcc.h</file>
-         <hash>64ce34811f937a4f233a76a7bc9d9d79fcc432ef2e3c070eb6e0bbe9abee7671</hash>
-      </entry>
-      <entry>
-         <file>mcc_generated_files\device_config.h</file>
-         <hash>e658a4cb6ac1c79b2a52ab2754ebce26d229cbe4bd8464122f3272d1e76e5881</hash>
-      </entry>
-      <entry>
-         <file>mcc_generated_files\interrupt_manager.h</file>
-         <hash>5c311e57ab563c3fadc6e5c40b1e425436e9366c40e5772f46f393a9f8ed9d39</hash>
-      </entry>
+   <generatedFileHashHistoryMap class="java.util.TreeMap">
       <entry>
          <file>main.c</file>
          <hash>30e3e0e5956e494fcd566f1509f2f2bbc404d25265a77934114af7c9d1fcdbd7</hash>
@@ -4897,28 +4885,40 @@
          <hash>0771bea192e5ba5209245e77ace1f73418044b88d1606b49e4361b5d5d0681f3</hash>
       </entry>
       <entry>
+         <file>mcc_generated_files\adc.h</file>
+         <hash>588b62273368fb38a0dcce047896a970f11cdd0cb2e729ba84f2da8d7c431488</hash>
+      </entry>
+      <entry>
          <file>mcc_generated_files\device_config.c</file>
          <hash>0c1446568049fa17e32a6aec2aad01e6cabc65cf60b9d57aceffd79e04f930c2</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files\pin_manager.h</file>
-         <hash>2b43886bf4aa722cb8ffb9809675f1201ba01b0955b26584997d312520f972dc</hash>
-      </entry>
-      <entry>
-         <file>mcc_generated_files\mcc.c</file>
-         <hash>ba59eb64a3c9a70fe75c95f79b5e2fd076fa3b149817b80b4ee088411d569224</hash>
+         <file>mcc_generated_files\device_config.h</file>
+         <hash>e658a4cb6ac1c79b2a52ab2754ebce26d229cbe4bd8464122f3272d1e76e5881</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\interrupt_manager.c</file>
          <hash>a82e89d67a09dcf80c06c3d0b8321a2008be442e0956a8eed4c22d95dbdccfb9</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files\adc.h</file>
-         <hash>588b62273368fb38a0dcce047896a970f11cdd0cb2e729ba84f2da8d7c431488</hash>
+         <file>mcc_generated_files\interrupt_manager.h</file>
+         <hash>5c311e57ab563c3fadc6e5c40b1e425436e9366c40e5772f46f393a9f8ed9d39</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\mcc.c</file>
+         <hash>ba59eb64a3c9a70fe75c95f79b5e2fd076fa3b149817b80b4ee088411d569224</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\mcc.h</file>
+         <hash>64ce34811f937a4f233a76a7bc9d9d79fcc432ef2e3c070eb6e0bbe9abee7671</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\pin_manager.c</file>
          <hash>8c45d058158c57513c2f1af63d52c6bacb178924403b99a5e2bf1fca5a787c79</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\pin_manager.h</file>
+         <hash>2b43886bf4aa722cb8ffb9809675f1201ba01b0955b26584997d312520f972dc</hash>
       </entry>
    </generatedFileHashHistoryMap>
 </config>

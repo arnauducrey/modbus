@@ -13,6 +13,9 @@
         <itemPath>mcc_generated_files/interrupt_manager.h</itemPath>
         <itemPath>mcc_generated_files/adc.h</itemPath>
       </logicalFolder>
+      <itemPath>measure.h</itemPath>
+      <itemPath>crc.h</itemPath>
+      <itemPath>modbus.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -31,6 +34,9 @@
         <itemPath>mcc_generated_files/pin_manager.c</itemPath>
       </logicalFolder>
       <itemPath>main.c</itemPath>
+      <itemPath>measure.c</itemPath>
+      <itemPath>crc.c</itemPath>
+      <itemPath>modbus.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -39,6 +45,9 @@
       <itemPath>modbus_proj.mc3</itemPath>
     </logicalFolder>
   </logicalFolder>
+  <sourceRootList>
+    <Elem>.</Elem>
+  </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
     <conf name="default" type="2">
@@ -47,7 +56,7 @@
         <targetDevice>PIC18F97J60</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>noID</platformTool>
+        <platformTool>snap</platformTool>
         <languageToolchain>XC8</languageToolchain>
         <languageToolchainVersion>2.41</languageToolchainVersion>
         <platform>3</platform>
