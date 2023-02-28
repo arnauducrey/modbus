@@ -29,21 +29,16 @@ void adc_init(void)
  */
 static uint16_t measure_adc(uint8_t channel)
 {
-	// TODO -> complete adc measure
+	// TODO -> complete adc measure osef
     
-    switch(channel)
-    {
-        case VOLTAGE:
-            
-            break;
-    }
+    
 }
 
 uint16_t measure_voltage()
 {
-	// TODO -> complete measure of voltage
+	
     
-        uint32_t result;
+        uint32_t result = 0;
         
         for(int i = 0;i < AVERAGE_SAMPLES;i++)
         {
@@ -56,5 +51,28 @@ uint16_t measure_voltage()
 
 uint16_t measure_current(uint16_t offset)
 {
-	// TODO -> complete measure of current
+
+    uint32_t result = 0;
+    
+            for(int i = 0;i < AVERAGE_SAMPLES;i++)
+        {
+            result +=  ADC_GetConversion(CURRENT);
+        }
+        result/= AVERAGE_SAMPLES;
+        
+        result = (result*ADC_REFH)/ADC_RESOLUTION; // conversion to mV
+        
+        result *= 1000; // uV
+        
+        result /= GAIN;// uV sur R11
+        
+        result /= RESISTOR; // uA
+        
+        if(result > offset)
+        {
+            return result-offset;
+        }
+        
+        return 0;
+        
 }

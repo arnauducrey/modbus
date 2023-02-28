@@ -48,7 +48,7 @@
 
 #include "interrupt_manager.h"
 #include "mcc.h"
-
+#include "../modbus.h"
 void  INTERRUPT_Initialize (void)
 {
     // Disable Interrupt Priority Vectors (16CXXX Compatibility Mode)
@@ -58,11 +58,24 @@ void  INTERRUPT_Initialize (void)
 void __interrupt() INTERRUPT_InterruptManager (void)
 {
     // interrupt handler
-    if(INTCONbits.PEIE == 1)
+    if(INTCONbits.TMR0IE == 1 && INTCONbits.TMR0IF == 1)
     {
-        if(PIE1bits.ADIE == 1 && PIR1bits.ADIF == 1)
+        // end of frame
+        TMR0_ISR();
+        TMR0ON = 0; // stop the timer
+        modbus_timer();// 
+    }
+    else if(INTCONbits.PEIE == 1)
+    {
+        if(PIE1bits.TX1IE == 1 && PIR1bits.TX1IF == 1)
         {
-            ADC_ISR();
+            EUSART1_TxDefaultInterruptHandler();
+        } 
+        else if(PIE1bits.RC1IE == 1 && PIR1bits.RC1IF == 1)
+        {
+            EUSART1_RxDefaultInterruptHandler();
+            modbus_char_recvd(RCREG1); // read the char
+            TMR0_ISR(); // Reset timer 0
         } 
         else
         {

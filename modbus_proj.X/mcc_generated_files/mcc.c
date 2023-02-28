@@ -54,6 +54,10 @@ void SYSTEM_Initialize(void)
     PIN_MANAGER_Initialize();
     OSCILLATOR_Initialize();
     ADC_Initialize();
+    EPWM1_Initialize();
+    TMR2_Initialize();
+    TMR0_Initialize();
+    EUSART1_Initialize();
 }
 
 void OSCILLATOR_Initialize(void)

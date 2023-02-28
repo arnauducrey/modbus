@@ -8832,9 +8832,9 @@ unsigned char __t3rd16on(void);
 # 50 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/pin_manager.h" 1
-# 109 "./mcc_generated_files/pin_manager.h"
+# 125 "./mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
-# 121 "./mcc_generated_files/pin_manager.h"
+# 137 "./mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
 # 51 "./mcc_generated_files/mcc.h" 2
 
@@ -9003,6 +9003,53 @@ char *tempnam(const char *, const char *);
 void INTERRUPT_Initialize (void);
 # 55 "./mcc_generated_files/mcc.h" 2
 
+# 1 "./mcc_generated_files/epwm1.h" 1
+# 96 "./mcc_generated_files/epwm1.h"
+void EPWM1_Initialize(void);
+# 122 "./mcc_generated_files/epwm1.h"
+void EPWM1_LoadDutyValue(uint16_t dutyValue);
+# 56 "./mcc_generated_files/mcc.h" 2
+
+# 1 "./mcc_generated_files/tmr2.h" 1
+# 103 "./mcc_generated_files/tmr2.h"
+void TMR2_Initialize(void);
+# 132 "./mcc_generated_files/tmr2.h"
+void TMR2_StartTimer(void);
+# 164 "./mcc_generated_files/tmr2.h"
+void TMR2_StopTimer(void);
+# 199 "./mcc_generated_files/tmr2.h"
+uint8_t TMR2_ReadTimer(void);
+# 238 "./mcc_generated_files/tmr2.h"
+void TMR2_WriteTimer(uint8_t timerVal);
+# 290 "./mcc_generated_files/tmr2.h"
+void TMR2_LoadPeriodRegister(uint8_t periodVal);
+# 325 "./mcc_generated_files/tmr2.h"
+_Bool TMR2_HasOverflowOccured(void);
+# 57 "./mcc_generated_files/mcc.h" 2
+
+# 1 "./mcc_generated_files/tmr0.h" 1
+# 100 "./mcc_generated_files/tmr0.h"
+void TMR0_Initialize(void);
+# 129 "./mcc_generated_files/tmr0.h"
+void TMR0_StartTimer(void);
+# 161 "./mcc_generated_files/tmr0.h"
+void TMR0_StopTimer(void);
+# 196 "./mcc_generated_files/tmr0.h"
+uint8_t TMR0_ReadTimer(void);
+# 235 "./mcc_generated_files/tmr0.h"
+void TMR0_WriteTimer(uint8_t timerVal);
+# 271 "./mcc_generated_files/tmr0.h"
+void TMR0_Reload(void);
+# 290 "./mcc_generated_files/tmr0.h"
+void TMR0_ISR(void);
+# 309 "./mcc_generated_files/tmr0.h"
+ void TMR0_SetInterruptHandler(void (* InterruptHandler)(void));
+# 327 "./mcc_generated_files/tmr0.h"
+extern void (*TMR0_InterruptHandler)(void);
+# 345 "./mcc_generated_files/tmr0.h"
+void TMR0_DefaultInterruptHandler(void);
+# 58 "./mcc_generated_files/mcc.h" 2
+
 # 1 "./mcc_generated_files/adc.h" 1
 # 72 "./mcc_generated_files/adc.h"
 typedef uint16_t adc_result_t;
@@ -9035,18 +9082,65 @@ adc_result_t ADC_GetConversionResult(void);
 adc_result_t ADC_GetConversion(adc_channel_t channel);
 # 314 "./mcc_generated_files/adc.h"
 void ADC_TemperatureAcquisitionDelay(void);
-# 330 "./mcc_generated_files/adc.h"
-void ADC_ISR(void);
-# 348 "./mcc_generated_files/adc.h"
- void ADC_SetInterruptHandler(void (* InterruptHandler)(void));
-# 366 "./mcc_generated_files/adc.h"
-extern void (*ADC_InterruptHandler)(void);
-# 384 "./mcc_generated_files/adc.h"
-void ADC_DefaultInterruptHandler(void);
-# 56 "./mcc_generated_files/mcc.h" 2
-# 71 "./mcc_generated_files/mcc.h"
+# 59 "./mcc_generated_files/mcc.h" 2
+
+# 1 "./mcc_generated_files/eusart1.h" 1
+# 75 "./mcc_generated_files/eusart1.h"
+typedef union {
+    struct {
+        unsigned perr : 1;
+        unsigned ferr : 1;
+        unsigned oerr : 1;
+        unsigned reserved : 5;
+    };
+    uint8_t status;
+}eusart1_status_t;
+
+
+
+
+extern volatile uint8_t eusart1TxBufferRemaining;
+extern volatile uint8_t eusart1RxCount;
+
+
+
+
+extern void (*EUSART1_TxDefaultInterruptHandler)(void);
+extern void (*EUSART1_RxDefaultInterruptHandler)(void);
+# 117 "./mcc_generated_files/eusart1.h"
+void EUSART1_Initialize(void);
+# 165 "./mcc_generated_files/eusart1.h"
+_Bool EUSART1_is_tx_ready(void);
+# 213 "./mcc_generated_files/eusart1.h"
+_Bool EUSART1_is_rx_ready(void);
+# 260 "./mcc_generated_files/eusart1.h"
+_Bool EUSART1_is_tx_done(void);
+# 308 "./mcc_generated_files/eusart1.h"
+eusart1_status_t EUSART1_get_last_status(void);
+# 328 "./mcc_generated_files/eusart1.h"
+uint8_t EUSART1_Read(void);
+# 348 "./mcc_generated_files/eusart1.h"
+void EUSART1_Write(uint8_t txData);
+# 369 "./mcc_generated_files/eusart1.h"
+void EUSART1_Transmit_ISR(void);
+# 390 "./mcc_generated_files/eusart1.h"
+void EUSART1_Receive_ISR(void);
+# 411 "./mcc_generated_files/eusart1.h"
+void EUSART1_RxDataHandler(void);
+# 429 "./mcc_generated_files/eusart1.h"
+void EUSART1_SetFramingErrorHandler(void (* interruptHandler)(void));
+# 447 "./mcc_generated_files/eusart1.h"
+void EUSART1_SetOverrunErrorHandler(void (* interruptHandler)(void));
+# 465 "./mcc_generated_files/eusart1.h"
+void EUSART1_SetErrorHandler(void (* interruptHandler)(void));
+# 485 "./mcc_generated_files/eusart1.h"
+void EUSART1_SetTxInterruptHandler(void (* interruptHandler)(void));
+# 505 "./mcc_generated_files/eusart1.h"
+void EUSART1_SetRxInterruptHandler(void (* interruptHandler)(void));
+# 60 "./mcc_generated_files/mcc.h" 2
+# 75 "./mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
-# 84 "./mcc_generated_files/mcc.h"
+# 88 "./mcc_generated_files/mcc.h"
 void OSCILLATOR_Initialize(void);
 # 44 "main.c" 2
 
@@ -9059,17 +9153,69 @@ uint16_t measure_voltage(void);
 uint16_t measure_current(uint16_t offset);
 # 45 "main.c" 2
 
+# 1 "./modbus.h" 1
+# 11 "./modbus.h"
+extern uint8_t modbusAddress;
+extern uint16_t input_registers[2];
+extern uint16_t holding_registers[2];
+# 27 "./modbus.h"
+void modbus_init(uint8_t address);
 
 
+
+
+
+
+uint8_t modbus_analyse_and_answer(void);
+
+
+
+
+
+
+void modbus_send(uint8_t length);
+# 51 "./modbus.h"
+void modbus_char_recvd(uint8_t c);
+# 60 "./modbus.h"
+void modbus_timer(void);
+# 46 "main.c" 2
+
+# 1 "./lcd/lcd.h" 1
+# 50 "./lcd/lcd.h"
+int8_t Lcd_Init(void);
+void LCD_2x16_WriteCmd(uint8_t command);
+void LCD_2x16_WriteData(uint8_t command);
+void LCD_2x16_WriteMsg(unsigned char * msg, uint8_t line);
+# 47 "main.c" 2
+
+
+
+
+
+uint16_t offset = 0;
 
 void main(void)
 {
 
     SYSTEM_Initialize();
-# 70 "main.c"
+# 76 "main.c"
+    holding_registers[1] = 0x80;
+    EPWM1_LoadDutyValue(0);
+
+    char tempString[20];
+    Lcd_Init();
+    offset = measure_current(0);
     while (1)
     {
 
-        uint16_t voltage = measure_voltage();
+
+         input_registers[0] = measure_voltage();
+         input_registers[1] = measure_current(offset);
+         EPWM1_LoadDutyValue(holding_registers[0]);
+
+         sprintf(tempString,"U = %03d[mV]",input_registers[0]);
+         LCD_2x16_WriteMsg(tempString,0);
+         sprintf(tempString,"I = %03d[uA]",input_registers[1]);
+         LCD_2x16_WriteMsg(tempString,1);
     }
 }

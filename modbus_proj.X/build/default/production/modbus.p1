@@ -1,7 +1,19 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"59 modbus.c
-[; ;modbus.c: 59:   uart_send(tx_buf,length);
-[v _uart_send `(i ~T0 @X0 0 e? ]
+"41 ./modbus.h
+[; ;./modbus.h: 41: void modbus_send(uint8_t length);
+[v _modbus_send `(v ~T0 @X0 0 ef1`uc ]
+"34
+[; ;./modbus.h: 34: uint8_t modbus_analyse_and_answer(void);
+[v _modbus_analyse_and_answer `(uc ~T0 @X0 0 ef ]
+"17 ./crc.h
+[; ;./crc.h: 17: uint16_t CRC16(const uint8_t *msg, uint16_t length);
+[v _CRC16 `(us ~T0 @X0 0 ef2`*Cuc`us ]
+"17511 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f97j60.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f97j60.h: 17511: extern volatile __bit TMR0ON __attribute__((address(0x7EAF)));
+[v _TMR0ON `Vb ~T0 @X0 0 e@32431 ]
+"348 ./mcc_generated_files/eusart1.h
+[; ;./mcc_generated_files/eusart1.h: 348: void EUSART1_Write(uint8_t txData);
+[v _EUSART1_Write `(v ~T0 @X0 0 ef1`uc ]
 "55 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f97j60.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f97j60.h: 55: __asm("MAADR5 equ 0E80h");
 [; <" MAADR5 equ 0E80h ;# ">
@@ -887,6 +899,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 "28
 [; ;modbus.c: 28: uint8_t tx_buf[256];
 [v _tx_buf `uc ~T0 @X0 -> 256 `i e ]
+"29
+[; ;modbus.c: 29: uint8_t index = 0;
+[v _index `uc ~T0 @X0 1 e ]
+[i _index
+-> -> 0 `i `uc
+]
 "31
 [; ;modbus.c: 31: uint8_t recPtr = 0;
 [v _recPtr `uc ~T0 @X0 1 e ]
@@ -901,85 +919,122 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 [e :U _modbus_timer ]
 [f ]
+"36
+[; ;modbus.c: 36:     modbus_send(modbus_analyse_and_answer());
+[e ( _modbus_send (1 ( _modbus_analyse_and_answer ..  ]
 "37
-[; ;modbus.c: 37: }
-[e :UE 540 ]
+[; ;modbus.c: 37:     index = 0;
+[e = _index -> -> 0 `i `uc ]
+"38
+[; ;modbus.c: 38: }
+[e :UE 543 ]
 }
-"39
-[; ;modbus.c: 39: uint8_t modbus_analyse_and_answer(void)
-[v _modbus_analyse_and_answer `(uc ~T0 @X0 1 ef ]
 "40
-[; ;modbus.c: 40: {
+[; ;modbus.c: 40: uint8_t modbus_analyse_and_answer(void)
+[v _modbus_analyse_and_answer `(uc ~T0 @X0 1 ef ]
+"41
+[; ;modbus.c: 41: {
 {
 [e :U _modbus_analyse_and_answer ]
 [f ]
-"43
-[; ;modbus.c: 43: }
-[e :UE 541 ]
-}
+"44
+[; ;modbus.c: 44:     uint16_t crc = rx_buf[index];
+[v _crc `us ~T0 @X0 1 a ]
+[e = _crc -> *U + &U _rx_buf * -> _index `ux -> -> # *U &U _rx_buf `ui `ux `us ]
 "45
-[; ;modbus.c: 45: void modbus_char_recvd(uint8_t c)
-[v _modbus_char_recvd `(v ~T0 @X0 1 ef1`uc ]
+[; ;modbus.c: 45:     crc << 8;
+[e << -> _crc `ui -> 8 `i ]
 "46
-[; ;modbus.c: 46: {
+[; ;modbus.c: 46:     crc += rx_buf[index-1];
+[e =+ _crc -> *U + &U _rx_buf * -> -> - -> _index `i -> 1 `i `ui `ux -> -> # *U &U _rx_buf `ui `ux `us ]
+"47
+[; ;modbus.c: 47:     uint16_t crcAtt = CRC16(rx_buf,index);
+[v _crcAtt `us ~T0 @X0 1 a ]
+[e = _crcAtt ( _CRC16 (2 , -> &U _rx_buf `*Cuc -> _index `us ]
+"48
+[; ;modbus.c: 48:     if(crc == crcAtt){
+[e $ ! == -> _crc `ui -> _crcAtt `ui 545  ]
+{
+"52
+[; ;modbus.c: 52:     }
+}
+[e :U 545 ]
+"54
+[; ;modbus.c: 54: }
+[e :UE 544 ]
+}
+"56
+[; ;modbus.c: 56: void modbus_char_recvd(uint8_t c)
+[v _modbus_char_recvd `(v ~T0 @X0 1 ef1`uc ]
+"57
+[; ;modbus.c: 57: {
 {
 [e :U _modbus_char_recvd ]
-"45
-[; ;modbus.c: 45: void modbus_char_recvd(uint8_t c)
+"56
+[; ;modbus.c: 56: void modbus_char_recvd(uint8_t c)
 [v _c `uc ~T0 @X0 1 r1 ]
-"46
-[; ;modbus.c: 46: {
+"57
+[; ;modbus.c: 57: {
 [f ]
-"48
-[; ;modbus.c: 48: }
-[e :UE 542 ]
+"59
+[; ;modbus.c: 59:     TMR0ON = 1;
+[e = _TMR0ON -> -> 1 `i `b ]
+"60
+[; ;modbus.c: 60:     rx_buf[index] = c;
+[e = *U + &U _rx_buf * -> _index `ux -> -> # *U &U _rx_buf `ui `ux _c ]
+"61
+[; ;modbus.c: 61:     index ++;
+[e ++ _index -> -> 1 `i `uc ]
+"62
+[; ;modbus.c: 62: }
+[e :UE 546 ]
 }
-"50
-[; ;modbus.c: 50: void modbus_send(uint8_t length)
+"64
+[; ;modbus.c: 64: void modbus_send(uint8_t length)
 [v _modbus_send `(v ~T0 @X0 1 ef1`uc ]
-"51
-[; ;modbus.c: 51: {
+"65
+[; ;modbus.c: 65: {
 {
 [e :U _modbus_send ]
-"50
-[; ;modbus.c: 50: void modbus_send(uint8_t length)
+"64
+[; ;modbus.c: 64: void modbus_send(uint8_t length)
 [v _length `uc ~T0 @X0 1 r1 ]
-"51
-[; ;modbus.c: 51: {
+"65
+[; ;modbus.c: 65: {
 [f ]
-"52
-[; ;modbus.c: 52:  uint16_t temp16;
+"66
+[; ;modbus.c: 66:  uint16_t temp16;
 [v _temp16 `us ~T0 @X0 1 a ]
-"53
-[; ;modbus.c: 53:  uint8_t i;
+"67
+[; ;modbus.c: 67:  uint8_t i;
 [v _i `uc ~T0 @X0 1 a ]
-"56
-[; ;modbus.c: 56:  length += 2;
+"70
+[; ;modbus.c: 70:  length += 2;
 [e =+ _length -> -> 2 `i `uc ]
-"59
-[; ;modbus.c: 59:   uart_send(tx_buf,length);
-[e ( _uart_send , &U _tx_buf -> _length `i ]
-"60
-[; ;modbus.c: 60: }
-[e :UE 543 ]
+"73
+[; ;modbus.c: 73:   EUSART1_Write(tx_buf[0]);
+[e ( _EUSART1_Write (1 *U + &U _tx_buf * -> -> -> 0 `i `ui `ux -> -> # *U &U _tx_buf `ui `ux ]
+"74
+[; ;modbus.c: 74: }
+[e :UE 547 ]
 }
-"62
-[; ;modbus.c: 62: void modbus_init(uint8_t address)
+"76
+[; ;modbus.c: 76: void modbus_init(uint8_t address)
 [v _modbus_init `(v ~T0 @X0 1 ef1`uc ]
-"63
-[; ;modbus.c: 63: {
+"77
+[; ;modbus.c: 77: {
 {
 [e :U _modbus_init ]
-"62
-[; ;modbus.c: 62: void modbus_init(uint8_t address)
+"76
+[; ;modbus.c: 76: void modbus_init(uint8_t address)
 [v _address `uc ~T0 @X0 1 r1 ]
-"63
-[; ;modbus.c: 63: {
+"77
+[; ;modbus.c: 77: {
 [f ]
-"64
-[; ;modbus.c: 64:  modbusAddress = address;
+"78
+[; ;modbus.c: 78:  modbusAddress = address;
 [e = _modbusAddress _address ]
-"66
-[; ;modbus.c: 66: }
-[e :UE 544 ]
+"80
+[; ;modbus.c: 80: }
+[e :UE 548 ]
 }

@@ -1,11 +1,32 @@
 Version 4.0 HI-TECH Software Intermediate Code
 [p mainexit ]
-"71 ./mcc_generated_files/mcc.h
-[; ;./mcc_generated_files/mcc.h: 71: void SYSTEM_Initialize(void);
+"75 ./mcc_generated_files/mcc.h
+[; ;./mcc_generated_files/mcc.h: 75: void SYSTEM_Initialize(void);
 [v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
+"13 ./modbus.h
+[; ;./modbus.h: 13: extern uint16_t holding_registers[2];
+[v _holding_registers `us ~T0 @X0 -> 0 `x e ]
+"122 ./mcc_generated_files/epwm1.h
+[; ;./mcc_generated_files/epwm1.h: 122: void EPWM1_LoadDutyValue(uint16_t dutyValue);
+[v _EPWM1_LoadDutyValue `(v ~T0 @X0 0 ef1`us ]
+"50 ./lcd/lcd.h
+[; ;./lcd/lcd.h: 50: int8_t Lcd_Init(void);
+[v _Lcd_Init `(c ~T0 @X0 0 ef ]
+"33 ./measure.h
+[; ;./measure.h: 33: uint16_t measure_current(uint16_t offset);
+[v _measure_current `(us ~T0 @X0 0 ef1`us ]
+"12 ./modbus.h
+[; ;./modbus.h: 12: extern uint16_t input_registers[2];
+[v _input_registers `us ~T0 @X0 -> 0 `x e ]
 "23 ./measure.h
 [; ;./measure.h: 23: uint16_t measure_voltage(void);
 [v _measure_voltage `(us ~T0 @X0 0 ef ]
+"111 C:\Program Files\Microchip\xc8\v2.41\pic\include\c99\stdio.h
+[; ;C:\Program Files\Microchip\xc8\v2.41\pic\include\c99\stdio.h: 111: int sprintf(char *restrict, const char *restrict, ...);
+[v _sprintf `(i ~T0 @X0 0 e1v`*uc`*Cuc ]
+"53 ./lcd/lcd.h
+[; ;./lcd/lcd.h: 53: void LCD_2x16_WriteMsg(unsigned char * msg, uint8_t line);
+[v _LCD_2x16_WriteMsg `(v ~T0 @X0 0 ef2`*uc`uc ]
 "55 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f97j60.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f97j60.h: 55: __asm("MAADR5 equ 0E80h");
 [; <" MAADR5 equ 0E80h ;# ">
@@ -876,35 +897,76 @@ Version 4.0 HI-TECH Software Intermediate Code
 "14694
 [; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f97j60.h: 14694: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
+"52 main.c
+[; ;main.c: 52: uint16_t offset = 0;
+[v _offset `us ~T0 @X0 1 e ]
+[i _offset
+-> -> 0 `i `us
+]
 [v $root$_main `(v ~T0 @X0 0 e ]
-"49 main.c
-[; ;main.c: 49: void main(void)
+"54
+[; ;main.c: 54: void main(void)
 [v _main `(v ~T0 @X0 1 ef ]
-"50
-[; ;main.c: 50: {
+"55
+[; ;main.c: 55: {
 {
 [e :U _main ]
 [f ]
-"52
-[; ;main.c: 52:     SYSTEM_Initialize();
+"57
+[; ;main.c: 57:     SYSTEM_Initialize();
 [e ( _SYSTEM_Initialize ..  ]
-"70
-[; ;main.c: 70:     while (1)
-[e :U 543 ]
-"71
-[; ;main.c: 71:     {
+"76
+[; ;main.c: 76:     holding_registers[1] = 0x80;
+[e = *U + &U _holding_registers * -> -> -> 1 `i `ui `ux -> -> # *U &U _holding_registers `ui `ux -> -> 128 `i `us ]
+"77
+[; ;main.c: 77:     EPWM1_LoadDutyValue(0);
+[e ( _EPWM1_LoadDutyValue (1 -> -> 0 `i `us ]
+"79
+[; ;main.c: 79:     char tempString[20];
+[v _tempString `uc ~T0 @X0 -> 20 `i a ]
+"80
+[; ;main.c: 80:     Lcd_Init();
+[e ( _Lcd_Init ..  ]
+"81
+[; ;main.c: 81:     offset = measure_current(0);
+[e = _offset ( _measure_current (1 -> -> 0 `i `us ]
+"82
+[; ;main.c: 82:     while (1)
+[e :U 545 ]
+"83
+[; ;main.c: 83:     {
 {
-"73
-[; ;main.c: 73:         uint16_t voltage = measure_voltage();
-[v _voltage `us ~T0 @X0 1 a ]
-[e = _voltage ( _measure_voltage ..  ]
-"74
-[; ;main.c: 74:     }
+"86
+[; ;main.c: 86:          input_registers[0] = measure_voltage();
+[e = *U + &U _input_registers * -> -> -> 0 `i `ui `ux -> -> # *U &U _input_registers `ui `ux ( _measure_voltage ..  ]
+"87
+[; ;main.c: 87:          input_registers[1] = measure_current(offset);
+[e = *U + &U _input_registers * -> -> -> 1 `i `ui `ux -> -> # *U &U _input_registers `ui `ux ( _measure_current (1 _offset ]
+"88
+[; ;main.c: 88:          EPWM1_LoadDutyValue(holding_registers[0]);
+[e ( _EPWM1_LoadDutyValue (1 *U + &U _holding_registers * -> -> -> 0 `i `ui `ux -> -> # *U &U _holding_registers `ui `ux ]
+"90
+[; ;main.c: 90:          sprintf(tempString,"U = %03d[mV]",input_registers[0]);
+[e ( _sprintf (1 , (. , &U _tempString :s 1C -> *U + &U _input_registers * -> -> -> 0 `i `ui `ux -> -> # *U &U _input_registers `ui `ux `ui ]
+"91
+[; ;main.c: 91:          LCD_2x16_WriteMsg(tempString,0);
+[e ( _LCD_2x16_WriteMsg (2 , -> &U _tempString `*uc -> -> 0 `i `uc ]
+"92
+[; ;main.c: 92:          sprintf(tempString,"I = %03d[uA]",input_registers[1]);
+[e ( _sprintf (1 , (. , &U _tempString :s 2C -> *U + &U _input_registers * -> -> -> 1 `i `ui `ux -> -> # *U &U _input_registers `ui `ux `ui ]
+"93
+[; ;main.c: 93:          LCD_2x16_WriteMsg(tempString,1);
+[e ( _LCD_2x16_WriteMsg (2 , -> &U _tempString `*uc -> -> 1 `i `uc ]
+"94
+[; ;main.c: 94:     }
 }
-[e :U 542 ]
-[e $U 543  ]
 [e :U 544 ]
-"75
-[; ;main.c: 75: }
-[e :UE 541 ]
+[e $U 545  ]
+[e :U 546 ]
+"95
+[; ;main.c: 95: }
+[e :UE 543 ]
 }
+[p f _sprintf 8421508 ]
+[a 1C 85 32 61 32 37 48 51 100 91 109 86 93 0 ]
+[a 2C 73 32 61 32 37 48 51 100 91 117 65 93 0 ]

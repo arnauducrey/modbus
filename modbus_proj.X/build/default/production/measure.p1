@@ -1,11 +1,11 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"39 measure.c
-[; ;measure.c: 39:     }
-[c E5246 5 6 .. ]
-[n E5246 . VOLTAGE CURRENT  ]
+"45 measure.c
+[; ;measure.c: 45:             result += ADC_GetConversion(VOLTAGE);
+[c E5273 5 6 .. ]
+[n E5273 . VOLTAGE CURRENT  ]
 "286 ./mcc_generated_files/adc.h
 [; ;./mcc_generated_files/adc.h: 286: adc_result_t ADC_GetConversion(adc_channel_t channel);
-[v _ADC_GetConversion `(us ~T0 @X0 0 ef1`E5246 ]
+[v _ADC_GetConversion `(us ~T0 @X0 0 ef1`E5273 ]
 "55 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f97j60.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f97j60.h: 55: __asm("MAADR5 equ 0E80h");
 [; <" MAADR5 equ 0E80h ;# ">
@@ -886,7 +886,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "21
 [; ;measure.c: 21: }
-[e :UE 541 ]
+[e :UE 543 ]
 }
 "30
 [; ;measure.c: 30: static uint16_t measure_adc(uint8_t channel)
@@ -901,87 +901,126 @@ Version 4.0 HI-TECH Software Intermediate Code
 "31
 [; ;measure.c: 31: {
 [f ]
-"34
-[; ;measure.c: 34:     switch(channel)
-[e $U 544  ]
 "35
-[; ;measure.c: 35:     {
-{
-"36
-[; ;measure.c: 36:         case VOLTAGE:
-[e :U 545 ]
-"38
-[; ;measure.c: 38:             break;
-[e $U 543  ]
-"39
-[; ;measure.c: 39:     }
+[; ;measure.c: 35: }
+[e :UE 544 ]
 }
-[e $U 543  ]
-[e :U 544 ]
-[e [\ -> _channel `i , $ . `E5246 0 545
- 543 ]
-[e :U 543 ]
-"40
-[; ;measure.c: 40: }
-[e :UE 542 ]
-}
-"42
-[; ;measure.c: 42: uint16_t measure_voltage()
+"37
+[; ;measure.c: 37: uint16_t measure_voltage()
 [v _measure_voltage `(us ~T0 @X0 1 ef ]
-"43
-[; ;measure.c: 43: {
+"38
+[; ;measure.c: 38: {
 {
 [e :U _measure_voltage ]
 [f ]
-"46
-[; ;measure.c: 46:         uint16_t result;
-[v _result `us ~T0 @X0 1 a ]
-"48
-[; ;measure.c: 48:         for(int i = 0;i < 8;i++)
+"41
+[; ;measure.c: 41:         uint32_t result = 0;
+[v _result `ul ~T0 @X0 1 a ]
+[e = _result -> -> -> 0 `i `l `ul ]
+"43
+[; ;measure.c: 43:         for(int i = 0;i < 8;i++)
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
-[e $ < _i -> 8 `i 547  ]
-[e $U 548  ]
-[e :U 547 ]
-"49
-[; ;measure.c: 49:         {
+[e $ < _i -> 8 `i 546  ]
+[e $U 547  ]
+[e :U 546 ]
+"44
+[; ;measure.c: 44:         {
 {
-"50
-[; ;measure.c: 50:             result += ADC_GetConversion(VOLTAGE);
-[e =+ _result -> ( _ADC_GetConversion (1 . `E5246 0 `us ]
-"51
-[; ;measure.c: 51:         }
+"45
+[; ;measure.c: 45:             result += ADC_GetConversion(VOLTAGE);
+[e =+ _result -> ( _ADC_GetConversion (1 . `E5273 0 `ul ]
+"46
+[; ;measure.c: 46:         }
 }
 [e ++ _i -> 1 `i ]
-[e $ < _i -> 8 `i 547  ]
-[e :U 548 ]
+[e $ < _i -> 8 `i 546  ]
+[e :U 547 ]
+}
+"47
+[; ;measure.c: 47:         result/= 8;
+[e =/ _result -> -> -> 8 `i `l `ul ]
+"49
+[; ;measure.c: 49:         return (result*3300)/(1024 - 1);
+[e ) -> / * _result -> -> -> 3300 `i `l `ul -> -> - -> 1024 `i -> 1 `i `l `ul `us ]
+[e $UE 545  ]
+"50
+[; ;measure.c: 50: }
+[e :UE 545 ]
 }
 "52
-[; ;measure.c: 52:         result/= 8;
-[e =/ _result -> -> 8 `i `ui ]
-"54
-[; ;measure.c: 54:         return (result*3300)/(1024 - 1);
-[e ) -> / * -> _result `ui -> -> 3300 `i `ui -> - -> 1024 `i -> 1 `i `ui `us ]
-[e $UE 546  ]
-"55
-[; ;measure.c: 55: }
-[e :UE 546 ]
-}
-"57
-[; ;measure.c: 57: uint16_t measure_current(uint16_t offset)
+[; ;measure.c: 52: uint16_t measure_current(uint16_t offset)
 [v _measure_current `(us ~T0 @X0 1 ef1`us ]
-"58
-[; ;measure.c: 58: {
+"53
+[; ;measure.c: 53: {
 {
 [e :U _measure_current ]
-"57
-[; ;measure.c: 57: uint16_t measure_current(uint16_t offset)
+"52
+[; ;measure.c: 52: uint16_t measure_current(uint16_t offset)
 [v _offset `us ~T0 @X0 1 r1 ]
-"58
-[; ;measure.c: 58: {
+"53
+[; ;measure.c: 53: {
 [f ]
+"55
+[; ;measure.c: 55:     uint32_t result = 0;
+[v _result `ul ~T0 @X0 1 a ]
+[e = _result -> -> -> 0 `i `l `ul ]
+"57
+[; ;measure.c: 57:             for(int i = 0;i < 8;i++)
+{
+[v _i `i ~T0 @X0 1 a ]
+[e = _i -> 0 `i ]
+[e $ < _i -> 8 `i 550  ]
+[e $U 551  ]
+[e :U 550 ]
+"58
+[; ;measure.c: 58:         {
+{
+"59
+[; ;measure.c: 59:             result += ADC_GetConversion(CURRENT);
+[e =+ _result -> ( _ADC_GetConversion (1 . `E5273 1 `ul ]
 "60
-[; ;measure.c: 60: }
-[e :UE 550 ]
+[; ;measure.c: 60:         }
+}
+[e ++ _i -> 1 `i ]
+[e $ < _i -> 8 `i 550  ]
+[e :U 551 ]
+}
+"61
+[; ;measure.c: 61:         result/= 8;
+[e =/ _result -> -> -> 8 `i `l `ul ]
+"63
+[; ;measure.c: 63:         result = (result*3300)/(1024 - 1);
+[e = _result / * _result -> -> -> 3300 `i `l `ul -> -> - -> 1024 `i -> 1 `i `l `ul ]
+"65
+[; ;measure.c: 65:         result *= 1000;
+[e =* _result -> -> -> 1000 `i `l `ul ]
+"67
+[; ;measure.c: 67:         result /= 66;
+[e =/ _result -> -> -> 66 `i `l `ul ]
+"69
+[; ;measure.c: 69:         result /= 3;
+[e =/ _result -> -> -> 3 `i `l `ul ]
+"71
+[; ;measure.c: 71:         if(result > offset)
+[e $ ! > _result -> _offset `ul 553  ]
+"72
+[; ;measure.c: 72:         {
+{
+"73
+[; ;measure.c: 73:             return result-offset;
+[e ) -> - _result -> _offset `ul `us ]
+[e $UE 549  ]
+"74
+[; ;measure.c: 74:         }
+}
+[e :U 553 ]
+"76
+[; ;measure.c: 76:         return 0;
+[e ) -> -> 0 `i `us ]
+[e $UE 549  ]
+"78
+[; ;measure.c: 78: }
+[e :UE 549 ]
 }
