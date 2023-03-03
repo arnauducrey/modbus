@@ -75,7 +75,8 @@ void __interrupt() INTERRUPT_InterruptManager (void)
         {
             EUSART1_RxDefaultInterruptHandler();
             modbus_char_recvd(RCREG1); // read the char
-            TMR0_ISR(); // Reset timer 0
+            TMR0_Reload(); // Reset timer 0
+            TMR0ON = 1;
         } 
         else
         {

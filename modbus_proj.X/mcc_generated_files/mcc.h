@@ -55,8 +55,8 @@
 #include "interrupt_manager.h"
 #include "epwm1.h"
 #include "tmr2.h"
-#include "tmr0.h"
 #include "adc.h"
+#include "tmr0.h"
 #include "eusart1.h"
 
 

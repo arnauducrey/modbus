@@ -3,16 +3,16 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/sylva/Desktop/CoursHES/CommunicationUP/modbus/modbus_proj.X/modbus.h</file>
             <file>file:/C:/Users/sylva/Desktop/CoursHES/CommunicationUP/modbus/modbus_proj.X/mcc_generated_files/tmr0.c</file>
             <file>file:/C:/Users/sylva/Desktop/CoursHES/CommunicationUP/modbus/modbus_proj.X/mcc_generated_files/eusart1.c</file>
             <file>file:/C:/Users/sylva/Desktop/CoursHES/CommunicationUP/modbus/modbus_proj.X/main.c</file>
             <file>file:/C:/Users/sylva/Desktop/CoursHES/CommunicationUP/modbus/modbus_proj.X/mcc_generated_files/adc.c</file>
-            <file>file:/C:/Users/sylva/Desktop/CoursHES/CommunicationUP/modbus/modbus_proj.X/measure.c</file>
-            <file>file:/C:/Users/sylva/Desktop/CoursHES/CommunicationUP/modbus/modbus_proj.X/crc.h</file>
+            <file>file:/C:/Program%20Files/Microchip/xc8/v2.41/pic/sources/c99/common/awdiv.c</file>
             <file>file:/C:/Users/sylva/Desktop/CoursHES/CommunicationUP/modbus/modbus_proj.X/modbus.c</file>
-            <file>file:/C:/Users/sylva/Desktop/CoursHES/CommunicationUP/modbus/modbus_proj.X/lcd/ft5xx6.h</file>
+            <file>file:/C:/Program%20Files/Microchip/xc8/v2.41/pic/sources/c99/common/__lldiv.c</file>
             <file>file:/C:/Users/sylva/Desktop/CoursHES/CommunicationUP/modbus/modbus_proj.X/lcd/lcd.c</file>
+            <file>file:/C:/Users/sylva/Desktop/CoursHES/CommunicationUP/modbus/modbus_proj.X/mcc_generated_files/mcc.c</file>
+            <file>file:/C:/Program%20Files/Microchip/xc8/v2.41/pic/sources/c99/common/awmod.c</file>
             <file>file:/C:/Users/sylva/Desktop/CoursHES/CommunicationUP/modbus/modbus_proj.X/mcc_generated_files/interrupt_manager.c</file>
             <file>file:/C:/Users/sylva/Desktop/CoursHES/CommunicationUP/modbus/modbus_proj.X/crc.c</file>
         </group>

@@ -39,18 +39,70 @@ void modbus_timer(void)
 
 uint8_t modbus_analyse_and_answer(void)
 {
-	// TODO -> complete the modbus analyse and answer
-    //verify CRC
-    uint16_t crc = rx_buf[index];
-    crc << 8;
-    crc += rx_buf[index-1];
-    uint16_t crcAtt = CRC16(rx_buf,index);
-    if(crc == crcAtt){
-    //Decript msg
-    //Encrypte answer in tx_buff
-    //return answer size
+    if(holding_registers[1] == rx_buf[0])
+    {
+        // TODO -> complete the modbus analyse and answer
+        //verify CRC
+        uint16_t crc = rx_buf[index-1];
+        //crc *= 256;
+        crc = crc << 8;
+        crc += rx_buf[index-2];
+        uint16_t crcAtt = CRC16(rx_buf,index-2);
+        if(crc == crcAtt){
+            
+            //Decript msg
+            /*switch case :
+             *0x04 read input register(VOLTAGE CURRENT)
+             * 0x06 write holding register PWM
+            */
+            uint8_t functionCode = rx_buf[1];
+            uint16_t startingAddress = 0;
+            uint16_t nbofRegister = 0;
+            
+            tx_buf[0] = 0x80;//Address of destination
+            switch (functionCode){
+                case 0x04:
+                    
+                    //Decrypting the msg
+                    startingAddress = rx_buf[2];
+                    startingAddress = startingAddress << 8;
+                    startingAddress += rx_buf[3];
+                    nbofRegister = rx_buf[4];
+                    nbofRegister <<= 8;
+                    nbofRegister += rx_buf[5];
+                    //Encrypting the answer
+                    tx_buf[1] = 0x04; // Function cod
+                    tx_buf[2] = 2*nbofRegister; // Byte count
+                    //Value asked by the user
+                    for(int i = 0;i < nbofRegister;i++)
+                    {
+                        tx_buf[3+i] = input_registers[startingAddress - 1 + i];
+                    }
+                    //Calculate the crc of the answer
+                    crc = CRC16(tx_buf,nbofRegister+3);
+                    tx_buf[nbofRegister+3] = crc;
+                    crc >>= 8;
+                    tx_buf[nbofRegister+4] = crc;
+                    return nbofRegister+5;
+                    break;
+                case 0x06:
+                    //
+                    break;
+                default:
+                    break;
+            }
+            //Encrypte answer in tx_buff
+            //return answer size
+            
+            
+            /*if(functionCode != 0)
+            {
+            functionCode = 0;
+            crcAtt=0;
+            }*/
+
+        }
     }
-    
 }
 
 void modbus_char_recvd(uint8_t c)
@@ -67,10 +119,13 @@ void modbus_send(uint8_t length)
 	uint8_t i;
 
 	// TODO -> complete modbus RCR calculation
-	length += 2; // add 2 CRC bytes for total size
+	//length += 2; // add 2 CRC bytes for total size
 
 	// For all the bytes to be transmitted
-  EUSART1_Write(tx_buf[0]);
+    for(int i = 0; i < length; i++){
+        EUSART1_Write(tx_buf[i]);
+    }
+  
 }
 
 void modbus_init(uint8_t address)

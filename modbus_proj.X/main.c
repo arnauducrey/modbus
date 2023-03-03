@@ -45,6 +45,7 @@
 #include "measure.h"
 #include "modbus.h"
 #include "lcd/lcd.h"
+
 /*
                          Main application
  */
@@ -61,13 +62,13 @@ void main(void)
     // Use the following macros to:
 
     // Enable the Global Interrupts
-    //INTERRUPT_GlobalInterruptEnable();
+    INTERRUPT_GlobalInterruptEnable();
 
     // Disable the Global Interrupts
     //INTERRUPT_GlobalInterruptDisable();
 
     // Enable the Peripheral Interrupts
-    //INTERRUPT_PeripheralInterruptEnable();
+    INTERRUPT_PeripheralInterruptEnable();
 
     // Disable the Peripheral Interrupts
     //INTERRUPT_PeripheralInterruptDisable();
@@ -78,7 +79,9 @@ void main(void)
     
     char tempString[20];
     Lcd_Init();
+    __delay_ms(10);
     offset = measure_current(0);
+ //  TMR0ON = 0;
     while (1)
     {
         // Add your application code
