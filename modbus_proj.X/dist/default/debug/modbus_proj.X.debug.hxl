@@ -1,7 +1,7 @@
 ### HEXMate logfile and output summary ###
 
 ### Command-line arguments ###
- C:\Users\sylva\AppData\Local\Temp\xcBsfok.1\driver_tmp_3.o
+ C:\Users\sylva\AppData\Local\Temp\xcAsfqc.\driver_tmp_3.o
  -Odist/default/debug\modbus_proj.X.debug.hex
  -logfile=dist/default/debug\modbus_proj.X.debug.hxl
  -addressing=1
@@ -9,19 +9,19 @@
 
 ### Memory Usage ###
  Input file ranges:
-  0h - 5h		(C:\Users\sylva\AppData\Local\Temp\xcBsfok.1\driver_tmp_3.o)
-  8h - 11Bh		(C:\Users\sylva\AppData\Local\Temp\xcBsfok.1\driver_tmp_3.o)
-  FDE4h - 115C1h		(C:\Users\sylva\AppData\Local\Temp\xcBsfok.1\driver_tmp_3.o)
-  1FFF8h - 1FFFDh		(C:\Users\sylva\AppData\Local\Temp\xcBsfok.1\driver_tmp_3.o)
+  0h - 5h		(C:\Users\sylva\AppData\Local\Temp\xcAsfqc.\driver_tmp_3.o)
+  8h - 129h		(C:\Users\sylva\AppData\Local\Temp\xcAsfqc.\driver_tmp_3.o)
+  FDE4h - 1163Bh		(C:\Users\sylva\AppData\Local\Temp\xcAsfqc.\driver_tmp_3.o)
+  1FFF8h - 1FFFDh		(C:\Users\sylva\AppData\Local\Temp\xcAsfqc.\driver_tmp_3.o)
  Unused ranges:
   6h - 7h
-  11Ch - FDE3h
-  115C2h - 1FFF7h
+  12Ah - FDE3h
+  1163Ch - 1FFF7h
 
 ### Hex Memory Map ###
  Legend:
   -- = Unused memory
-  H1 = Input file             (C:\Users\sylva\AppData\Local\Temp\xcBsfok.1\driver_tmp_3.o)
+  H1 = Input file             (C:\Users\sylva\AppData\Local\Temp\xcAsfqc.\driver_tmp_3.o)
 ----------------------------------------------------------
          | 00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
 ----------------------------------------------------------
@@ -42,7 +42,8 @@
 000000E0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 000000F0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00000100 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00000110 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 -- -- -- --
+00000110 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00000120 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 -- -- -- -- -- --
 ----------------------------------------------------------
 0000FDE0 | -- -- -- -- H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 0000FDF0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
@@ -426,7 +427,14 @@
 00011590 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 000115A0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 000115B0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-000115C0 | H1 H1 -- -- -- -- -- -- -- -- -- -- -- -- -- --
+000115C0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+000115D0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+000115E0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+000115F0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00011600 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00011610 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00011620 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00011630 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 -- -- -- --
 ----------------------------------------------------------
 0001FFF0 | -- -- -- -- -- -- -- -- H1 H1 H1 H1 H1 H1 -- --
 00020000 | --

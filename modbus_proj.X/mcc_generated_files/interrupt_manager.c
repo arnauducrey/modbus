@@ -61,9 +61,9 @@ void __interrupt() INTERRUPT_InterruptManager (void)
     if(INTCONbits.TMR0IE == 1 && INTCONbits.TMR0IF == 1)
     {
         // end of frame
-        TMR0_ISR();
+        TMR0_ISR(); // Reset timer
         TMR0ON = 0; // stop the timer
-        modbus_timer();// 
+        modbus_timer(); //treat the frame
     }
     else if(INTCONbits.PEIE == 1)
     {

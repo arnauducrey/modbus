@@ -919,111 +919,114 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 [e :U _modbus_timer ]
 [f ]
-"36
-[; ;modbus.c: 36:     modbus_send(modbus_analyse_and_answer());
+"35
+[; ;modbus.c: 35:     modbus_send(modbus_analyse_and_answer());
 [e ( _modbus_send (1 ( _modbus_analyse_and_answer ..  ]
-"37
-[; ;modbus.c: 37:     index = 0;
+"36
+[; ;modbus.c: 36:     index = 0;
 [e = _index -> -> 0 `i `uc ]
-"38
-[; ;modbus.c: 38: }
+"37
+[; ;modbus.c: 37: }
 [e :UE 543 ]
 }
-"40
-[; ;modbus.c: 40: uint8_t modbus_analyse_and_answer(void)
+"39
+[; ;modbus.c: 39: uint8_t modbus_analyse_and_answer(void)
 [v _modbus_analyse_and_answer `(uc ~T0 @X0 1 ef ]
-"41
-[; ;modbus.c: 41: {
+"40
+[; ;modbus.c: 40: {
 {
 [e :U _modbus_analyse_and_answer ]
 [f ]
-"42
-[; ;modbus.c: 42:     if(holding_registers[1] == rx_buf[0])
+"41
+[; ;modbus.c: 41:     if(holding_registers[1] == rx_buf[0])
 [e $ ! == -> *U + &U _holding_registers * -> -> -> 1 `i `ui `ux -> -> # *U &U _holding_registers `ui `ux `ui -> *U + &U _rx_buf * -> -> -> 0 `i `ui `ux -> -> # *U &U _rx_buf `ui `ux `ui 545  ]
-"43
-[; ;modbus.c: 43:     {
+"42
+[; ;modbus.c: 42:     {
 {
-"46
-[; ;modbus.c: 46:         uint16_t crc = rx_buf[index-1];
+"45
+[; ;modbus.c: 45:         uint16_t crc = rx_buf[index-1];
 [v _crc `us ~T0 @X0 1 a ]
 [e = _crc -> *U + &U _rx_buf * -> -> - -> _index `i -> 1 `i `ui `ux -> -> # *U &U _rx_buf `ui `ux `us ]
-"48
-[; ;modbus.c: 48:         crc = crc << 8;
+"47
+[; ;modbus.c: 47:         crc = crc << 8;
 [e = _crc -> << -> _crc `ui -> 8 `i `us ]
-"49
-[; ;modbus.c: 49:         crc += rx_buf[index-2];
+"48
+[; ;modbus.c: 48:         crc += rx_buf[index-2];
 [e =+ _crc -> *U + &U _rx_buf * -> -> - -> _index `i -> 2 `i `ui `ux -> -> # *U &U _rx_buf `ui `ux `us ]
-"50
-[; ;modbus.c: 50:         uint16_t crcAtt = CRC16(rx_buf,index-2);
+"49
+[; ;modbus.c: 49:         uint16_t crcAtt = CRC16(rx_buf,index-2);
 [v _crcAtt `us ~T0 @X0 1 a ]
 [e = _crcAtt ( _CRC16 (2 , -> &U _rx_buf `*Cuc -> - -> _index `i -> 2 `i `us ]
-"51
-[; ;modbus.c: 51:         if(crc == crcAtt){
+"50
+[; ;modbus.c: 50:         if(crc == crcAtt){
 [e $ ! == -> _crc `ui -> _crcAtt `ui 546  ]
 {
-"58
-[; ;modbus.c: 58:             uint8_t functionCode = rx_buf[1];
+"57
+[; ;modbus.c: 57:             uint8_t functionCode = rx_buf[1];
 [v _functionCode `uc ~T0 @X0 1 a ]
 [e = _functionCode *U + &U _rx_buf * -> -> -> 1 `i `ui `ux -> -> # *U &U _rx_buf `ui `ux ]
-"59
-[; ;modbus.c: 59:             uint16_t startingAddress = 0;
+"58
+[; ;modbus.c: 58:             uint16_t startingAddress = 0;
 [v _startingAddress `us ~T0 @X0 1 a ]
 [e = _startingAddress -> -> 0 `i `us ]
-"60
-[; ;modbus.c: 60:             uint16_t nbofRegister = 0;
+"59
+[; ;modbus.c: 59:             uint16_t nbofRegister = 0;
 [v _nbofRegister `us ~T0 @X0 1 a ]
 [e = _nbofRegister -> -> 0 `i `us ]
-"61
-[; ;modbus.c: 61:             uint16_t pwmValue = 0;
+"60
+[; ;modbus.c: 60:             uint16_t pwmValue = 0;
 [v _pwmValue `us ~T0 @X0 1 a ]
 [e = _pwmValue -> -> 0 `i `us ]
-"62
-[; ;modbus.c: 62:             tx_buf[0] = 0x80;
+"61
+[; ;modbus.c: 61:             tx_buf[0] = 0x80;
 [e = *U + &U _tx_buf * -> -> -> 0 `i `ui `ux -> -> # *U &U _tx_buf `ui `ux -> -> 128 `i `uc ]
-"63
-[; ;modbus.c: 63:             switch (functionCode){
+"62
+[; ;modbus.c: 62:             switch (functionCode){
 [e $U 548  ]
 {
-"64
-[; ;modbus.c: 64:                 case 0x04:
+"63
+[; ;modbus.c: 63:                 case 0x04:
 [e :U 549 ]
-"67
-[; ;modbus.c: 67:                     startingAddress = rx_buf[2];
+"66
+[; ;modbus.c: 66:                     startingAddress = rx_buf[2];
 [e = _startingAddress -> *U + &U _rx_buf * -> -> -> 2 `i `ui `ux -> -> # *U &U _rx_buf `ui `ux `us ]
-"68
-[; ;modbus.c: 68:                     startingAddress = startingAddress << 8;
+"67
+[; ;modbus.c: 67:                     startingAddress = startingAddress << 8;
 [e = _startingAddress -> << -> _startingAddress `ui -> 8 `i `us ]
-"69
-[; ;modbus.c: 69:                     startingAddress += rx_buf[3];
+"68
+[; ;modbus.c: 68:                     startingAddress += rx_buf[3];
 [e =+ _startingAddress -> *U + &U _rx_buf * -> -> -> 3 `i `ui `ux -> -> # *U &U _rx_buf `ui `ux `us ]
-"70
-[; ;modbus.c: 70:                     nbofRegister = rx_buf[4];
+"69
+[; ;modbus.c: 69:                     nbofRegister = rx_buf[4];
 [e = _nbofRegister -> *U + &U _rx_buf * -> -> -> 4 `i `ui `ux -> -> # *U &U _rx_buf `ui `ux `us ]
-"71
-[; ;modbus.c: 71:                     nbofRegister <<= 8;
+"70
+[; ;modbus.c: 70:                     nbofRegister <<= 8;
 [e =<< _nbofRegister -> -> 8 `i `us ]
-"72
-[; ;modbus.c: 72:                     nbofRegister += rx_buf[5];
+"71
+[; ;modbus.c: 71:                     nbofRegister += rx_buf[5];
 [e =+ _nbofRegister -> *U + &U _rx_buf * -> -> -> 5 `i `ui `ux -> -> # *U &U _rx_buf `ui `ux `us ]
-"74
-[; ;modbus.c: 74:                     tx_buf[1] = 0x04;
+"73
+[; ;modbus.c: 73:                     tx_buf[1] = 0x04;
 [e = *U + &U _tx_buf * -> -> -> 1 `i `ui `ux -> -> # *U &U _tx_buf `ui `ux -> -> 4 `i `uc ]
-"75
-[; ;modbus.c: 75:                     tx_buf[2] = 2*nbofRegister;
+"74
+[; ;modbus.c: 74:                     tx_buf[2] = 2*nbofRegister;
 [e = *U + &U _tx_buf * -> -> -> 2 `i `ui `ux -> -> # *U &U _tx_buf `ui `ux -> * -> -> 2 `i `ui -> _nbofRegister `ui `uc ]
-"77
-[; ;modbus.c: 77:                     for(int i = 0;i < nbofRegister;i++)
+"76
+[; ;modbus.c: 76:                     for(int i = 0;i < nbofRegister;i++)
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
 [e $U 553  ]
 [e :U 550 ]
-"78
-[; ;modbus.c: 78:                     {
+"77
+[; ;modbus.c: 77:                     {
 {
+"78
+[; ;modbus.c: 78:                         tx_buf[3+(i*2)] = (input_registers[startingAddress + i]>>8);
+[e = *U + &U _tx_buf * -> -> + -> 3 `i * _i -> 2 `i `ui `ux -> -> # *U &U _tx_buf `ui `ux -> >> -> *U + &U _input_registers * -> + -> _startingAddress `ui -> _i `ui `ux -> -> # *U &U _input_registers `ui `ux `ui -> 8 `i `uc ]
 "79
-[; ;modbus.c: 79:                         tx_buf[3+i] = input_registers[startingAddress - 1 + i];
-[e = *U + &U _tx_buf * -> -> + -> 3 `i _i `ui `ux -> -> # *U &U _tx_buf `ui `ux -> *U + &U _input_registers * -> + - -> _startingAddress `ui -> -> 1 `i `ui -> _i `ui `ux -> -> # *U &U _input_registers `ui `ux `uc ]
+[; ;modbus.c: 79:                         tx_buf[3+(i*2)+1] = input_registers[startingAddress + i];
+[e = *U + &U _tx_buf * -> -> + + -> 3 `i * _i -> 2 `i -> 1 `i `ui `ux -> -> # *U &U _tx_buf `ui `ux -> *U + &U _input_registers * -> + -> _startingAddress `ui -> _i `ui `ux -> -> # *U &U _input_registers `ui `ux `uc ]
 "80
 [; ;modbus.c: 80:                     }
 }
@@ -1033,20 +1036,20 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 551 ]
 }
 "82
-[; ;modbus.c: 82:                     crc = CRC16(tx_buf,nbofRegister+3);
-[e = _crc ( _CRC16 (2 , -> &U _tx_buf `*Cuc -> + -> _nbofRegister `ui -> -> 3 `i `ui `us ]
+[; ;modbus.c: 82:                     crc = CRC16(tx_buf,nbofRegister*2+3);
+[e = _crc ( _CRC16 (2 , -> &U _tx_buf `*Cuc -> + * -> _nbofRegister `ui -> -> 2 `i `ui -> -> 3 `i `ui `us ]
 "83
-[; ;modbus.c: 83:                     tx_buf[nbofRegister+3] = crc;
-[e = *U + &U _tx_buf * -> + -> _nbofRegister `ui -> -> 3 `i `ui `ux -> -> # *U &U _tx_buf `ui `ux -> _crc `uc ]
+[; ;modbus.c: 83:                     tx_buf[nbofRegister*2+3] = crc;
+[e = *U + &U _tx_buf * -> + * -> _nbofRegister `ui -> -> 2 `i `ui -> -> 3 `i `ui `ux -> -> # *U &U _tx_buf `ui `ux -> _crc `uc ]
 "84
 [; ;modbus.c: 84:                     crc >>= 8;
 [e =>> _crc -> -> 8 `i `us ]
 "85
-[; ;modbus.c: 85:                     tx_buf[nbofRegister+4] = crc;
-[e = *U + &U _tx_buf * -> + -> _nbofRegister `ui -> -> 4 `i `ui `ux -> -> # *U &U _tx_buf `ui `ux -> _crc `uc ]
+[; ;modbus.c: 85:                     tx_buf[nbofRegister*2+4] = crc;
+[e = *U + &U _tx_buf * -> + * -> _nbofRegister `ui -> -> 2 `i `ui -> -> 4 `i `ui `ux -> -> # *U &U _tx_buf `ui `ux -> _crc `uc ]
 "86
-[; ;modbus.c: 86:                     return nbofRegister+5;
-[e ) -> + -> _nbofRegister `ui -> -> 5 `i `ui `uc ]
+[; ;modbus.c: 86:                     return nbofRegister*2+5;
+[e ) -> + * -> _nbofRegister `ui -> -> 2 `i `ui -> -> 5 `i `ui `uc ]
 [e $UE 544  ]
 "87
 [; ;modbus.c: 87:                     break;

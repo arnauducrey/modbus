@@ -9207,7 +9207,6 @@ uint8_t recPtr = 0;
 
 void modbus_timer(void)
 {
-
     modbus_send(modbus_analyse_and_answer());
     index = 0;
 }
@@ -9251,14 +9250,15 @@ uint8_t modbus_analyse_and_answer(void)
 
                     for(int i = 0;i < nbofRegister;i++)
                     {
-                        tx_buf[3+i] = input_registers[startingAddress - 1 + i];
+                        tx_buf[3+(i*2)] = (input_registers[startingAddress + i]>>8);
+                        tx_buf[3+(i*2)+1] = input_registers[startingAddress + i];
                     }
 
-                    crc = CRC16(tx_buf,nbofRegister+3);
-                    tx_buf[nbofRegister+3] = crc;
+                    crc = CRC16(tx_buf,nbofRegister*2+3);
+                    tx_buf[nbofRegister*2+3] = crc;
                     crc >>= 8;
-                    tx_buf[nbofRegister+4] = crc;
-                    return nbofRegister+5;
+                    tx_buf[nbofRegister*2+4] = crc;
+                    return nbofRegister*2+5;
                     break;
                 case 0x06:
 

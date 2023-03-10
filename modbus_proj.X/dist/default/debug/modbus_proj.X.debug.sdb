@@ -139,7 +139,7 @@ CURRENT 6
 [v _measure_current measure_current `(us  1 e 2 0 ]
 "33 C:\Users\sylva\Desktop\CoursHES\CommunicationUP\modbus\modbus_proj.X\modbus.c
 [v _modbus_timer modbus_timer `(v  1 e 1 0 ]
-"40
+"39
 [v _modbus_analyse_and_answer modbus_analyse_and_answer `(uc  1 e 1 0 ]
 "120
 [v _modbus_char_recvd modbus_char_recvd `(v  1 e 1 0 ]
@@ -532,6 +532,8 @@ CURRENT 6
 [v _auchCRCHi auchCRCHi `C[256]uc  1 e 256 0 ]
 "27
 [v _auchCRCLo auchCRCLo `C[256]uc  1 e 256 0 ]
+"49 C:\Users\sylva\Desktop\CoursHES\CommunicationUP\modbus\modbus_proj.X\main.c
+[v _offset offset `us  1 e 2 0 ]
 "62 C:\Users\sylva\Desktop\CoursHES\CommunicationUP\modbus\modbus_proj.X\mcc_generated_files/eusart1.c
 [v _eusart1TxHead eusart1TxHead `VEuc  1 e 1 0 ]
 "63
@@ -589,7 +591,7 @@ CURRENT 6
 {
 "78
 [v main@tempString tempString `[20]uc  1 a 20 0 ]
-"92
+"93
 } 0
 "9 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\nf_sprintf.c
 [v _sprintf sprintf `(i  1 e 2 0 ]
@@ -918,7 +920,7 @@ CURRENT 6
 "33 C:\Users\sylva\Desktop\CoursHES\CommunicationUP\modbus\modbus_proj.X\modbus.c
 [v _modbus_timer modbus_timer `(v  1 e 1 0 ]
 {
-"38
+"37
 } 0
 "128
 [v _modbus_send modbus_send `(v  1 e 1 0 ]
@@ -940,25 +942,25 @@ CURRENT 6
 [v EUSART1_Write@txData txData `uc  1 a 1 0 ]
 "194
 } 0
-"40 C:\Users\sylva\Desktop\CoursHES\CommunicationUP\modbus\modbus_proj.X\modbus.c
+"39 C:\Users\sylva\Desktop\CoursHES\CommunicationUP\modbus\modbus_proj.X\modbus.c
 [v _modbus_analyse_and_answer modbus_analyse_and_answer `(uc  1 e 1 0 ]
 {
 "98
 [v modbus_analyse_and_answer@i_1189 i `i  1 a 2 18 ]
-"77
-[v modbus_analyse_and_answer@i i `i  1 a 2 16 ]
-"60
-[v modbus_analyse_and_answer@nbofRegister nbofRegister `us  1 a 2 24 ]
+"76
+[v modbus_analyse_and_answer@i i `i  1 a 2 22 ]
 "59
-[v modbus_analyse_and_answer@startingAddress startingAddress `us  1 a 2 20 ]
-"61
-[v modbus_analyse_and_answer@pwmValue pwmValue `us  1 a 2 14 ]
+[v modbus_analyse_and_answer@nbofRegister nbofRegister `us  1 a 2 26 ]
 "58
-[v modbus_analyse_and_answer@functionCode functionCode `uc  1 a 1 13 ]
-"46
-[v modbus_analyse_and_answer@crc crc `us  1 a 2 22 ]
-"50
-[v modbus_analyse_and_answer@crcAtt crcAtt `us  1 a 2 11 ]
+[v modbus_analyse_and_answer@startingAddress startingAddress `us  1 a 2 24 ]
+"60
+[v modbus_analyse_and_answer@pwmValue pwmValue `us  1 a 2 16 ]
+"57
+[v modbus_analyse_and_answer@functionCode functionCode `uc  1 a 1 15 ]
+"45
+[v modbus_analyse_and_answer@crc crc `us  1 a 2 20 ]
+"49
+[v modbus_analyse_and_answer@crcAtt crcAtt `us  1 a 2 13 ]
 "118
 } 0
 "48 C:\Users\sylva\Desktop\CoursHES\CommunicationUP\modbus\modbus_proj.X\crc.c

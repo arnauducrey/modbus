@@ -78,6 +78,7 @@ void main(void)
     char tempString[20];
     Lcd_Init();
     __delay_ms(10);
+    offset = measure_current(0);
     while (1)
     {          
          input_registers[0] = measure_voltage(); // load voltage in register
@@ -86,7 +87,7 @@ void main(void)
          //Diplay on the screen
          sprintf(tempString,"U = %03d[mV]",input_registers[0]);
          LCD_2x16_WriteMsg(tempString,0);
-         sprintf(tempString,"I = %03d[uA]",input_registers[1]);
+         sprintf(tempString,"I = %04d[uA]",input_registers[1]);
          LCD_2x16_WriteMsg(tempString,1);
     }
 }

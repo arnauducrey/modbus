@@ -9221,6 +9221,7 @@ void main(void)
     char tempString[20];
     Lcd_Init();
     _delay((unsigned long)((10)*(25000000/4000.0)));
+    offset = measure_current(0);
     while (1)
     {
          input_registers[0] = measure_voltage();
@@ -9229,7 +9230,7 @@ void main(void)
 
          sprintf(tempString,"U = %03d[mV]",input_registers[0]);
          LCD_2x16_WriteMsg(tempString,0);
-         sprintf(tempString,"I = %03d[uA]",input_registers[1]);
+         sprintf(tempString,"I = %04d[uA]",input_registers[1]);
          LCD_2x16_WriteMsg(tempString,1);
     }
 }
