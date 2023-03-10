@@ -46,10 +46,6 @@
 #include "modbus.h"
 #include "lcd/lcd.h"
 
-/*
-                         Main application
- */
-
 uint16_t offset = 0;
 
 void main(void)
@@ -77,25 +73,21 @@ void main(void)
     holding_registers[1] = 0x80; // set of the address (default value)
     EPWM1_LoadDutyValue(0); // set duty cycle to 0% in order to measure the offset current
     
+    
+    //Configure the LCD to display current and voltage 
     char tempString[20];
     Lcd_Init();
     __delay_ms(10);
-    offset = measure_current(0);
- //  TMR0ON = 0;
     while (1)
-    {
-        // Add your application code
-            
+    {          
          input_registers[0] = measure_voltage(); // load voltage in register
          input_registers[1] = measure_current(offset); // load current in register
          EPWM1_LoadDutyValue(holding_registers[0]); //control duty cycle
-         
+         //Diplay on the screen
          sprintf(tempString,"U = %03d[mV]",input_registers[0]);
          LCD_2x16_WriteMsg(tempString,0);
          sprintf(tempString,"I = %03d[uA]",input_registers[1]);
          LCD_2x16_WriteMsg(tempString,1);
     }
 }
-/**
- End of File
-*/
+  

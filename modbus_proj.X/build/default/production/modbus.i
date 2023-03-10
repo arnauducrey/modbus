@@ -9233,7 +9233,7 @@ uint8_t modbus_analyse_and_answer(void)
             uint8_t functionCode = rx_buf[1];
             uint16_t startingAddress = 0;
             uint16_t nbofRegister = 0;
-
+            uint16_t pwmValue = 0;
             tx_buf[0] = 0x80;
             switch (functionCode){
                 case 0x04:
@@ -9253,6 +9253,7 @@ uint8_t modbus_analyse_and_answer(void)
                     {
                         tx_buf[3+i] = input_registers[startingAddress - 1 + i];
                     }
+
                     crc = CRC16(tx_buf,nbofRegister+3);
                     tx_buf[nbofRegister+3] = crc;
                     crc >>= 8;
@@ -9261,11 +9262,23 @@ uint8_t modbus_analyse_and_answer(void)
                     break;
                 case 0x06:
 
+                    startingAddress = rx_buf[2];
+                    startingAddress = startingAddress << 8;
+                    startingAddress += rx_buf[3];
+                    pwmValue = rx_buf[4];
+                    pwmValue <<= 8;
+                    pwmValue += rx_buf[5];
+                    holding_registers[0] = pwmValue;
+
+                    for (int i = 0; i < 7; i++){
+                        tx_buf[i+1] = rx_buf[i+1];
+                    }
+                    return 8;
                     break;
                 default:
                     break;
             }
-# 103 "modbus.c"
+# 116 "modbus.c"
         }
     }
 }

@@ -58,7 +58,7 @@ uint8_t modbus_analyse_and_answer(void)
             uint8_t functionCode = rx_buf[1];
             uint16_t startingAddress = 0;
             uint16_t nbofRegister = 0;
-            
+            uint16_t pwmValue = 0;
             tx_buf[0] = 0x80;//Address of destination
             switch (functionCode){
                 case 0x04:
@@ -86,7 +86,19 @@ uint8_t modbus_analyse_and_answer(void)
                     return nbofRegister+5;
                     break;
                 case 0x06:
-                    //
+                    //Decrypting the msg
+                    startingAddress = rx_buf[2];
+                    startingAddress = startingAddress << 8;
+                    startingAddress += rx_buf[3];
+                    pwmValue = rx_buf[4];
+                    pwmValue <<= 8;
+                    pwmValue += rx_buf[5];
+                    holding_registers[0] = pwmValue; //Store the new pwm value
+                    //Encrypting the answer
+                    for (int i = 0; i < 7; i++){
+                        tx_buf[i+1] = rx_buf[i+1];
+                    }
+                    return 8;//return the size of rx_buf
                     break;
                 default:
                     break;

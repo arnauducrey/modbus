@@ -9189,10 +9189,6 @@ void LCD_2x16_WriteMsg(unsigned char * msg, uint8_t line);
 # 47 "main.c" 2
 
 
-
-
-
-
 uint16_t offset = 0;
 
 void main(void)
@@ -9220,15 +9216,13 @@ void main(void)
     holding_registers[1] = 0x80;
     EPWM1_LoadDutyValue(0);
 
+
+
     char tempString[20];
     Lcd_Init();
     _delay((unsigned long)((10)*(25000000/4000.0)));
-    offset = measure_current(0);
-
     while (1)
     {
-
-
          input_registers[0] = measure_voltage();
          input_registers[1] = measure_current(offset);
          EPWM1_LoadDutyValue(holding_registers[0]);
