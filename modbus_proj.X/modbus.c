@@ -81,8 +81,9 @@ uint8_t modbus_analyse_and_answer(void)
                     for(int i = 0;i < nbofRegister;i++)
                     {
                         //I*2 because we have to jump by two for each iteration (16bits goes into two time 8bits)
+                        //the 3 is here to make an offset corresponding to the values already entered in the table
                         tx_buf[3+(i*2)] = (input_registers[startingAddress + i]>>8);// Register the 8 msb  
-                        tx_buf[3+(i*2)+1] = input_registers[startingAddress + i]; // register the 8 lsb         
+                        tx_buf[3+(i*2)+1] = input_registers[startingAddress + i]; // register the 8 lsb        
                     }
                     
                     //Calculate the crc of the answer
