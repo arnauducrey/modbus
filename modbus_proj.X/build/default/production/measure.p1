@@ -987,11 +987,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;measure.c: 54:         }
 }
 [e :U 551 ]
-"56
-[; ;measure.c: 56:         return 0;
+"55
+[; ;measure.c: 55:         return 0;
 [e ) -> -> 0 `i `us ]
 [e $UE 547  ]
-"58
-[; ;measure.c: 58: }
+"56
+[; ;measure.c: 56: }
 [e :UE 547 ]
 }

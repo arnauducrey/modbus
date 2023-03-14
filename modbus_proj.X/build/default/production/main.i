@@ -9208,7 +9208,7 @@ void main(void)
     Lcd_Init();
 
      EPWM1_LoadDutyValue(0);
-    _delay((unsigned long)((10)*(25000000/4000.0)));
+    _delay((unsigned long)((30)*(25000000/4000.0)));
     offset = measure_current(0);
 
     while (1)

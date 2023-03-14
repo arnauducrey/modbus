@@ -52,7 +52,7 @@ uint16_t measure_current(uint16_t offset)
         {
             return result-offset; // remove the offset and return value
         }
-        
-        return 0; // return 0 if result is below the offset
-        
+        return 0; // return 0 if result is below the offset 
 }
+
+

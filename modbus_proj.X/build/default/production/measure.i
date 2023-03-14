@@ -9188,7 +9188,5 @@ uint16_t measure_current(uint16_t offset)
         {
             return result-offset;
         }
-
         return 0;
-
 }

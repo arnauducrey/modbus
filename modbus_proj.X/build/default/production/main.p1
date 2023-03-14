@@ -957,8 +957,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 67:      EPWM1_LoadDutyValue(0);
 [e ( _EPWM1_LoadDutyValue (1 -> -> 0 `i `us ]
 "68
-[; ;main.c: 68:     _delay((unsigned long)((10)*(25000000/4000.0)));
-[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 25000000 `l `d .4000.0 `ul ]
+[; ;main.c: 68:     _delay((unsigned long)((30)*(25000000/4000.0)));
+[e ( __delay (1 -> * -> -> 30 `i `d / -> -> 25000000 `l `d .4000.0 `ul ]
 "69
 [; ;main.c: 69:     offset = measure_current(0);
 [e = _offset ( _measure_current (1 -> -> 0 `i `us ]

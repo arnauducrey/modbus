@@ -4,10 +4,6 @@
 #include <stdint.h>
 #include <stdio.h>
 #include "mcc_generated_files/mcc.h"
-// Modbus functions
-#define READ_INPUT_REGISTERS    0x04
-#define READ_HOLDING_REGISTERS  0x03
-#define WRITE_SINGLE_REGISTER   0x06
 
 // Modbus data model
 uint8_t modbusAddress;
@@ -15,6 +11,7 @@ uint16_t input_registers[2];//voltage, current
 uint16_t holding_registers[2];// zcontrol, addressSet
 
 // Modbus error codes
+// not used yet
 #define ILLEGAL_FUNCTION		1
 #define ILLEGAL_DATA_ADDRESS	2
 #define ILLEGAL_DATA_VALUE		3

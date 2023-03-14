@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.41 build 20230208172133 
-                                                                                               Tue Mar 14 13:16:00 2023
+                                                                                               Tue Mar 14 15:19:18 2023
 
 Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1 
      1                           	processor	18F97J60
@@ -1414,17 +1414,17 @@ Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1
   1395   01080E  6F60               	movwf	EPWM1_LoadDutyValue@dutyValue& (0+255),b
   1396   010810  EC5D  F08A         	call	_EPWM1_LoadDutyValue	;wreg free
   1397   010814                     
-  1398                           ;main.c: 68:     _delay((unsigned long)((10)*(25000000/4000.0)));
-  1399   010814  0E52               	movlw	82
+  1398                           ;main.c: 68:     _delay((unsigned long)((30)*(25000000/4000.0)));
+  1399   010814  0EF4               	movlw	244
   1400   010816  0100               	movlb	0	; () banked
   1401   010818  6FB4               	movwf	??_main& (0+255),b
-  1402   01081A  0E29               	movlw	41
+  1402   01081A  0E80               	movlw	128
   1403   01081C                     u2267:
   1404   01081C  2EE8               	decfsz	wreg,f,c
   1405   01081E  D7FE               	bra	u2267
   1406   010820  2FB4               	decfsz	??_main& (0+255),f,b
   1407   010822  D7FC               	bra	u2267
-  1408   010824  D000               	nop2	
+  1408   010824  F000               	nop	
   1409   010826                     
   1410                           ;main.c: 69:     offset = measure_current(0);
   1411   010826  0E00               	movlw	0
@@ -3909,7 +3909,7 @@ Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1
   3734   0107E6                     l3546:
   3735                           
   3736                           ; BSR set to: 0
-  3737                           ;measure.c: 56:         return 0;
+  3737                           ;measure.c: 55:         return 0;
   3738   0107E6  0E00               	movlw	0
   3739   0107E8  6F7A               	movwf	(?_measure_current+1)& (0+255),b
   3740   0107EA  0E00               	movlw	0
@@ -8354,7 +8354,7 @@ CODE                 0      0       0       0        0.0%
 
 
 Microchip Technology PIC18 Macro Assembler V2.41 build 20230208172133 
-Symbol Table                                                                                   Tue Mar 14 13:16:00 2023
+Symbol Table                                                                                   Tue Mar 14 15:19:18 2023
 
                modbus_analyse_and_answer@crcAtt 000E                        _eusart1TxBufferRemaining 0045  
                                             l21 1192                                              l15 1306  

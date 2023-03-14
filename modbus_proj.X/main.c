@@ -65,7 +65,7 @@ void main(void)
     Lcd_Init();
     
      EPWM1_LoadDutyValue(0); // set duty cycle to 0% 
-    __delay_ms(10); // small delay to wait for pwm update
+    __delay_ms(30); // small delay to wait for pwm update
     offset = measure_current(0); // get the offset current
     
     while (1)
