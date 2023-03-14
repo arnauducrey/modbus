@@ -1,0 +1,1030 @@
+[p GLOBOPT AUTOSTATIC IEEE_FLT IEEE_DBL LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F97J60 ]
+[d frameptr 4065 ]
+"82 C:\Users\sylva\Desktop\CoursHES\CommunicationUP\modbus\modbus_proj.X\mcc_generated_files/adc.c
+[e E4918 . `uc
+VOLTAGE 5
+CURRENT 6
+]
+"25 C:\Users\sylva\Desktop\CoursHES\CommunicationUP\modbus\modbus_proj.X\measure.c
+[e E5258 . `uc
+VOLTAGE 5
+CURRENT 6
+]
+"7 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\__lldiv.c
+[v ___lldiv __lldiv `(ul  1 e 4 0 ]
+"1 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\abs.c
+[v _abs abs `(i  1 e 2 0 ]
+"7 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"7 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+"152 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\doprnt.c
+[v _pad pad `(v  1 s 1 pad ]
+"470
+[v _dtoa dtoa `(v  1 s 1 dtoa ]
+"1029
+[v _read_prec_or_width read_prec_or_width `(i  1 s 2 read_prec_or_width ]
+"1048
+[v _vfpfcnvrt vfpfcnvrt `(v  1 s 1 vfpfcnvrt ]
+"1546
+[v _vfprintf vfprintf `(i  1 e 2 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\fleq.c
+[v ___fleq __fleq `(b  1 e 0 0 ]
+"62 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\float.c
+[v ___ftpack __ftpack `(f  1 e 4 0 ]
+"86 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 4 0 ]
+"54 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 4 0 ]
+"62 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 4 0 ]
+"19 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 4 0 ]
+"8 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\nf_fputc.c
+[v _fputc fputc `(i  1 e 2 0 ]
+"8 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\nf_fputs.c
+[v _fputs fputs `(i  1 e 2 0 ]
+"9 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\nf_sprintf.c
+[v _sprintf sprintf `(i  1 e 2 0 ]
+"7 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\putch.c
+[v _putch putch `(v  1 e 1 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"245
+[v ___flsub __flsub `(d  1 e 4 0 ]
+"11 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+"8 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+"15 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+"15 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"91 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\Umul64.c
+[v ___omul __omul `(uo  1 e 8 0 ]
+"48 C:\Users\sylva\Desktop\CoursHES\CommunicationUP\modbus\modbus_proj.X\crc.c
+[v _CRC16 CRC16 `(us  1 e 2 0 ]
+"17 C:\Users\sylva\Desktop\CoursHES\CommunicationUP\modbus\modbus_proj.X\lcd/lcd.c
+[v _Lcd_Init Lcd_Init `(c  1 e 1 0 ]
+"43
+[v _LCD_2x16_WriteCmd LCD_2x16_WriteCmd `(v  1 e 1 0 ]
+"58
+[v _LCD_2x16_WriteData LCD_2x16_WriteData `(v  1 e 1 0 ]
+"74
+[v _LCD_2x16_WriteMsg LCD_2x16_WriteMsg `(v  1 e 1 0 ]
+"51 C:\Users\sylva\Desktop\CoursHES\CommunicationUP\modbus\modbus_proj.X\main.c
+[v _main main `(v  1 e 1 0 ]
+"61 C:\Users\sylva\Desktop\CoursHES\CommunicationUP\modbus\modbus_proj.X\mcc_generated_files/adc.c
+[v _ADC_Initialize ADC_Initialize `(v  1 e 1 0 ]
+"109
+[v _ADC_GetConversion ADC_GetConversion `(us  1 e 2 0 ]
+"64 C:\Users\sylva\Desktop\CoursHES\CommunicationUP\modbus\modbus_proj.X\mcc_generated_files/epwm1.c
+[v _EPWM1_Initialize EPWM1_Initialize `(v  1 e 1 0 ]
+"85
+[v _EPWM1_LoadDutyValue EPWM1_LoadDutyValue `(v  1 e 1 0 ]
+"88 C:\Users\sylva\Desktop\CoursHES\CommunicationUP\modbus\modbus_proj.X\mcc_generated_files/eusart1.c
+[v _EUSART1_Initialize EUSART1_Initialize `(v  1 e 1 0 ]
+"173
+[v _EUSART1_Write EUSART1_Write `(v  1 e 1 0 ]
+"197
+[v _EUSART1_Transmit_ISR EUSART1_Transmit_ISR `(v  1 e 1 0 ]
+"216
+[v _EUSART1_Receive_ISR EUSART1_Receive_ISR `(v  1 e 1 0 ]
+"240
+[v _EUSART1_RxDataHandler EUSART1_RxDataHandler `(v  1 e 1 0 ]
+"250
+[v _EUSART1_DefaultFramingErrorHandler EUSART1_DefaultFramingErrorHandler `(v  1 e 1 0 ]
+"252
+[v _EUSART1_DefaultOverrunErrorHandler EUSART1_DefaultOverrunErrorHandler `(v  1 e 1 0 ]
+"260
+[v _EUSART1_DefaultErrorHandler EUSART1_DefaultErrorHandler `(v  1 e 1 0 ]
+"264
+[v _EUSART1_SetFramingErrorHandler EUSART1_SetFramingErrorHandler `(v  1 e 1 0 ]
+"268
+[v _EUSART1_SetOverrunErrorHandler EUSART1_SetOverrunErrorHandler `(v  1 e 1 0 ]
+"272
+[v _EUSART1_SetErrorHandler EUSART1_SetErrorHandler `(v  1 e 1 0 ]
+"276
+[v _EUSART1_SetTxInterruptHandler EUSART1_SetTxInterruptHandler `(v  1 e 1 0 ]
+"280
+[v _EUSART1_SetRxInterruptHandler EUSART1_SetRxInterruptHandler `(v  1 e 1 0 ]
+"52 C:\Users\sylva\Desktop\CoursHES\CommunicationUP\modbus\modbus_proj.X\mcc_generated_files/interrupt_manager.c
+[v _INTERRUPT_Initialize INTERRUPT_Initialize `(v  1 e 1 0 ]
+"58
+[v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `IIH(v  1 e 1 0 ]
+"50 C:\Users\sylva\Desktop\CoursHES\CommunicationUP\modbus\modbus_proj.X\mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+"63
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+"50 C:\Users\sylva\Desktop\CoursHES\CommunicationUP\modbus\modbus_proj.X\mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+"67 C:\Users\sylva\Desktop\CoursHES\CommunicationUP\modbus\modbus_proj.X\mcc_generated_files/tmr0.c
+[v _TMR0_Initialize TMR0_Initialize `(v  1 e 1 0 ]
+"129
+[v _TMR0_Reload TMR0_Reload `(v  1 e 1 0 ]
+"136
+[v _TMR0_ISR TMR0_ISR `(v  1 e 1 0 ]
+"156
+[v _TMR0_SetInterruptHandler TMR0_SetInterruptHandler `(v  1 e 1 0 ]
+"160
+[v _TMR0_DefaultInterruptHandler TMR0_DefaultInterruptHandler `(v  1 e 1 0 ]
+"62 C:\Users\sylva\Desktop\CoursHES\CommunicationUP\modbus\modbus_proj.X\mcc_generated_files/tmr2.c
+[v _TMR2_Initialize TMR2_Initialize `(v  1 e 1 0 ]
+"18 C:\Users\sylva\Desktop\CoursHES\CommunicationUP\modbus\modbus_proj.X\measure.c
+[v _measure_voltage measure_voltage `(us  1 e 2 0 ]
+"32
+[v _measure_current measure_current `(us  1 e 2 0 ]
+"33 C:\Users\sylva\Desktop\CoursHES\CommunicationUP\modbus\modbus_proj.X\modbus.c
+[v _modbus_timer modbus_timer `(v  1 e 1 0 ]
+"39
+[v _modbus_analyse_and_answer modbus_analyse_and_answer `(uc  1 e 1 0 ]
+"129
+[v _modbus_char_recvd modbus_char_recvd `(v  1 e 1 0 ]
+"136
+[v _modbus_send modbus_send `(v  1 e 1 0 ]
+"3145 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-J_DFP/1.5.44/xc8\pic\include\proc\pic18f97j60.h
+[v _ECCP1DEL ECCP1DEL `VEuc  1 e 1 @3961 ]
+"3569
+[v _BAUDCON1 BAUDCON1 `VEuc  1 e 1 @3966 ]
+"4247
+[v _SPBRGH1 SPBRGH1 `VEuc  1 e 1 @3967 ]
+"5992
+[v _LATA LATA `VEuc  1 e 1 @3977 ]
+"6113
+[v _LATB LATB `VEuc  1 e 1 @3978 ]
+"6225
+[v _LATC LATC `VEuc  1 e 1 @3979 ]
+"6337
+[v _LATD LATD `VEuc  1 e 1 @3980 ]
+[s S64 . 1 `uc 1 LATD0 1 0 :1:0 
+`uc 1 LATD1 1 0 :1:1 
+`uc 1 LATD2 1 0 :1:2 
+`uc 1 LATD3 1 0 :1:3 
+`uc 1 LATD4 1 0 :1:4 
+`uc 1 LATD5 1 0 :1:5 
+`uc 1 LATD6 1 0 :1:6 
+`uc 1 LATD7 1 0 :1:7 
+]
+"6364
+[s S73 . 1 `uc 1 LD0 1 0 :1:0 
+`uc 1 LD1 1 0 :1:1 
+`uc 1 LD2 1 0 :1:2 
+`uc 1 LD3 1 0 :1:3 
+`uc 1 LD4 1 0 :1:4 
+`uc 1 LD5 1 0 :1:5 
+`uc 1 LD6 1 0 :1:6 
+`uc 1 LD7 1 0 :1:7 
+]
+[u S82 . 1 `S64 1 . 1 0 `S73 1 . 1 0 ]
+[v _LATDbits LATDbits `VES82  1 e 1 @3980 ]
+"6449
+[v _LATE LATE `VEuc  1 e 1 @3981 ]
+"6561
+[v _LATF LATF `VEuc  1 e 1 @3982 ]
+"6673
+[v _LATG LATG `VEuc  1 e 1 @3983 ]
+"6767
+[v _LATH LATH `VEuc  1 e 1 @3984 ]
+"6879
+[v _LATJ LATJ `VEuc  1 e 1 @3985 ]
+"6991
+[v _TRISA TRISA `VEuc  1 e 1 @3986 ]
+"7165
+[v _TRISB TRISB `VEuc  1 e 1 @3987 ]
+"7387
+[v _TRISC TRISC `VEuc  1 e 1 @3988 ]
+"7609
+[v _TRISD TRISD `VEuc  1 e 1 @3989 ]
+[s S24 . 1 `uc 1 TRISD0 1 0 :1:0 
+`uc 1 TRISD1 1 0 :1:1 
+`uc 1 TRISD2 1 0 :1:2 
+`uc 1 TRISD3 1 0 :1:3 
+`uc 1 TRISD4 1 0 :1:4 
+`uc 1 TRISD5 1 0 :1:5 
+`uc 1 TRISD6 1 0 :1:6 
+`uc 1 TRISD7 1 0 :1:7 
+]
+"7641
+[s S33 . 1 `uc 1 RD0 1 0 :1:0 
+`uc 1 RD1 1 0 :1:1 
+`uc 1 RD2 1 0 :1:2 
+`uc 1 RD3 1 0 :1:3 
+`uc 1 RD4 1 0 :1:4 
+`uc 1 RD5 1 0 :1:5 
+`uc 1 RD6 1 0 :1:6 
+`uc 1 RD7 1 0 :1:7 
+]
+[u S42 . 1 `S24 1 . 1 0 `S33 1 . 1 0 ]
+[v _TRISDbits TRISDbits `VES42  1 e 1 @3989 ]
+"7831
+[v _TRISE TRISE `VEuc  1 e 1 @3990 ]
+"8053
+[v _TRISF TRISF `VEuc  1 e 1 @3991 ]
+"8275
+[v _TRISG TRISG `VEuc  1 e 1 @3992 ]
+"8497
+[v _TRISH TRISH `VEuc  1 e 1 @3993 ]
+"8719
+[v _TRISJ TRISJ `VEuc  1 e 1 @3994 ]
+"8941
+[v _OSCTUNE OSCTUNE `VEuc  1 e 1 @3995 ]
+[s S442 . 1 `uc 1 TMR1IE 1 0 :1:0 
+`uc 1 TMR2IE 1 0 :1:1 
+`uc 1 CCP1IE 1 0 :1:2 
+`uc 1 SSP1IE 1 0 :1:3 
+`uc 1 TX1IE 1 0 :1:4 
+`uc 1 RC1IE 1 0 :1:5 
+`uc 1 ADIE 1 0 :1:6 
+`uc 1 PSPIE 1 0 :1:7 
+]
+"9079
+[s S451 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 SSPIE 1 0 :1:3 
+`uc 1 TXIE 1 0 :1:4 
+`uc 1 RCIE 1 0 :1:5 
+]
+[u S456 . 1 `S442 1 . 1 0 `S451 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES456  1 e 1 @3997 ]
+[s S341 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 CCP1IF 1 0 :1:2 
+`uc 1 SSP1IF 1 0 :1:3 
+`uc 1 TX1IF 1 0 :1:4 
+`uc 1 RC1IF 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+`uc 1 PSPIF 1 0 :1:7 
+]
+"9165
+[s S350 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+]
+[s S354 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 SSPIF 1 0 :1:3 
+]
+[u S357 . 1 `S341 1 . 1 0 `S350 1 . 1 0 `S354 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES357  1 e 1 @3998 ]
+"9803
+[v _RCSTA1 RCSTA1 `VEuc  1 e 1 @4011 ]
+[s S593 . 1 `uc 1 RX9D 1 0 :1:0 
+`uc 1 OERR 1 0 :1:1 
+`uc 1 FERR 1 0 :1:2 
+`uc 1 ADDEN 1 0 :1:3 
+`uc 1 CREN 1 0 :1:4 
+`uc 1 SREN 1 0 :1:5 
+`uc 1 RX9 1 0 :1:6 
+`uc 1 SPEN 1 0 :1:7 
+]
+"9856
+[s S602 . 1 `uc 1 RCD8 1 0 :1:0 
+`uc 1 . 1 0 :5:1 
+`uc 1 RC9 1 0 :1:6 
+]
+[s S606 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 NOT_RC8 1 0 :1:6 
+]
+[s S609 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 nRC8 1 0 :1:6 
+]
+[s S612 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 RC8_9 1 0 :1:6 
+]
+[s S615 . 1 `uc 1 RX9D1 1 0 :1:0 
+`uc 1 OERR1 1 0 :1:1 
+`uc 1 FERR1 1 0 :1:2 
+`uc 1 ADDEN1 1 0 :1:3 
+`uc 1 CREN1 1 0 :1:4 
+`uc 1 SREN1 1 0 :1:5 
+`uc 1 RX91 1 0 :1:6 
+`uc 1 SPEN1 1 0 :1:7 
+]
+[s S624 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 SRENA 1 0 :1:5 
+]
+[u S627 . 1 `S593 1 . 1 0 `S602 1 . 1 0 `S606 1 . 1 0 `S609 1 . 1 0 `S612 1 . 1 0 `S615 1 . 1 0 `S624 1 . 1 0 ]
+[v _RCSTA1bits RCSTA1bits `VES627  1 e 1 @4011 ]
+"10127
+[v _TXSTA1 TXSTA1 `VEuc  1 e 1 @4012 ]
+[s S529 . 1 `uc 1 TX9D 1 0 :1:0 
+`uc 1 TRMT 1 0 :1:1 
+`uc 1 BRGH 1 0 :1:2 
+`uc 1 SENDB 1 0 :1:3 
+`uc 1 SYNC 1 0 :1:4 
+`uc 1 TXEN 1 0 :1:5 
+`uc 1 TX9 1 0 :1:6 
+`uc 1 CSRC 1 0 :1:7 
+]
+"10172
+[s S538 . 1 `uc 1 TXD8 1 0 :1:0 
+`uc 1 . 1 0 :5:1 
+`uc 1 TX8_9 1 0 :1:6 
+]
+[s S542 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 NOT_TX8 1 0 :1:6 
+]
+[s S545 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 nTX8 1 0 :1:6 
+]
+[s S548 . 1 `uc 1 TX9D1 1 0 :1:0 
+`uc 1 TRMT1 1 0 :1:1 
+`uc 1 BRGH1 1 0 :1:2 
+`uc 1 SENDB1 1 0 :1:3 
+`uc 1 SYNC1 1 0 :1:4 
+`uc 1 TXEN1 1 0 :1:5 
+`uc 1 TX91 1 0 :1:6 
+`uc 1 CSRC1 1 0 :1:7 
+]
+[u S557 . 1 `S529 1 . 1 0 `S538 1 . 1 0 `S542 1 . 1 0 `S545 1 . 1 0 `S548 1 . 1 0 ]
+[v _TXSTA1bits TXSTA1bits `VES557  1 e 1 @4012 ]
+"10415
+[v _TXREG1 TXREG1 `VEuc  1 e 1 @4013 ]
+"10427
+[v _RCREG1 RCREG1 `VEuc  1 e 1 @4014 ]
+"10439
+[v _SPBRG1 SPBRG1 `VEuc  1 e 1 @4015 ]
+"10801
+[v _ECCP1AS ECCP1AS `VEuc  1 e 1 @4022 ]
+"11359
+[v _CCP1CON CCP1CON `VEuc  1 e 1 @4029 ]
+"11558
+[v _CCPR1L CCPR1L `VEuc  1 e 1 @4030 ]
+"11565
+[v _CCPR1H CCPR1H `VEuc  1 e 1 @4031 ]
+"11572
+[v _ADCON2 ADCON2 `VEuc  1 e 1 @4032 ]
+"11643
+[v _ADCON1 ADCON1 `VEuc  1 e 1 @4033 ]
+[s S292 . 1 `uc 1 PCFG 1 0 :4:0 
+`uc 1 VCFG 1 0 :2:4 
+]
+"11668
+[s S295 . 1 `uc 1 PCFG0 1 0 :1:0 
+`uc 1 PCFG1 1 0 :1:1 
+`uc 1 PCFG2 1 0 :1:2 
+`uc 1 PCFG3 1 0 :1:3 
+`uc 1 VCFG0 1 0 :1:4 
+`uc 1 VCFG1 1 0 :1:5 
+]
+[s S302 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 CHSN3 1 0 :1:3 
+`uc 1 VCFG01 1 0 :1:4 
+`uc 1 VCFG11 1 0 :1:5 
+]
+[u S307 . 1 `S292 1 . 1 0 `S295 1 . 1 0 `S302 1 . 1 0 ]
+[v _ADCON1bits ADCON1bits `VES307  1 e 1 @4033 ]
+"11728
+[v _ADCON0 ADCON0 `VEuc  1 e 1 @4034 ]
+[s S187 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO_NOT_DONE 1 0 :1:1 
+]
+"11774
+[s S190 . 1 `uc 1 ADON 1 0 :1:0 
+`uc 1 GO_nDONE 1 0 :1:1 
+`uc 1 CHS 1 0 :4:2 
+]
+[s S194 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 DONE 1 0 :1:1 
+`uc 1 CHS0 1 0 :1:2 
+`uc 1 CHS1 1 0 :1:3 
+`uc 1 CHS2 1 0 :1:4 
+`uc 1 CHS3 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 ADCAL 1 0 :1:7 
+]
+[s S203 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO_DONE 1 0 :1:1 
+]
+[s S206 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO 1 0 :1:1 
+]
+[s S209 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 NOT_DONE 1 0 :1:1 
+]
+[s S212 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 nDONE 1 0 :1:1 
+]
+[s S215 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GODONE 1 0 :1:1 
+]
+[u S218 . 1 `S187 1 . 1 0 `S190 1 . 1 0 `S194 1 . 1 0 `S203 1 . 1 0 `S206 1 . 1 0 `S209 1 . 1 0 `S212 1 . 1 0 `S215 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES218  1 e 1 @4034 ]
+"11861
+[v _ADRESL ADRESL `VEuc  1 e 1 @4035 ]
+"11868
+[v _ADRESH ADRESH `VEuc  1 e 1 @4036 ]
+"13317
+[v _T2CON T2CON `VEuc  1 e 1 @4042 ]
+[s S379 . 1 `uc 1 T2CKPS 1 0 :2:0 
+`uc 1 TMR2ON 1 0 :1:2 
+`uc 1 TOUTPS 1 0 :4:3 
+]
+"13338
+[s S383 . 1 `uc 1 T2CKPS0 1 0 :1:0 
+`uc 1 T2CKPS1 1 0 :1:1 
+`uc 1 . 1 0 :1:2 
+`uc 1 T2OUTPS0 1 0 :1:3 
+`uc 1 T2OUTPS1 1 0 :1:4 
+`uc 1 T2OUTPS2 1 0 :1:5 
+`uc 1 T2OUTPS3 1 0 :1:6 
+]
+[u S391 . 1 `S379 1 . 1 0 `S383 1 . 1 0 ]
+[v _T2CONbits T2CONbits `VES391  1 e 1 @4042 ]
+"13388
+[v _PR2 PR2 `VEuc  1 e 1 @4043 ]
+"13395
+[v _TMR2 TMR2 `VEuc  1 e 1 @4044 ]
+[s S889 . 1 `uc 1 NOT_BOR 1 0 :1:0 
+]
+"13583
+[s S891 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 NOT_POR 1 0 :1:1 
+]
+[s S894 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 NOT_PD 1 0 :1:2 
+]
+[s S897 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 NOT_TO 1 0 :1:3 
+]
+[s S900 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 NOT_RI 1 0 :1:4 
+]
+[s S903 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 NOT_CM 1 0 :1:5 
+]
+[s S906 . 1 `uc 1 nBOR 1 0 :1:0 
+`uc 1 nPOR 1 0 :1:1 
+`uc 1 nPD 1 0 :1:2 
+`uc 1 nTO 1 0 :1:3 
+`uc 1 nRI 1 0 :1:4 
+`uc 1 nCM 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 IPEN 1 0 :1:7 
+]
+[s S915 . 1 `uc 1 BOR 1 0 :1:0 
+`uc 1 POR 1 0 :1:1 
+`uc 1 PD 1 0 :1:2 
+`uc 1 TO 1 0 :1:3 
+`uc 1 RI 1 0 :1:4 
+`uc 1 CM 1 0 :1:5 
+]
+[u S922 . 1 `S889 1 . 1 0 `S891 1 . 1 0 `S894 1 . 1 0 `S897 1 . 1 0 `S900 1 . 1 0 `S903 1 . 1 0 `S906 1 . 1 0 `S915 1 . 1 0 ]
+[v _RCONbits RCONbits `VES922  1 e 1 @4048 ]
+"13762
+[v _OSCCON OSCCON `VEuc  1 e 1 @4051 ]
+"13810
+[v _T0CON T0CON `VEuc  1 e 1 @4053 ]
+[s S763 . 1 `uc 1 T0PS 1 0 :3:0 
+`uc 1 PSA 1 0 :1:3 
+`uc 1 T0SE 1 0 :1:4 
+`uc 1 T0CS 1 0 :1:5 
+`uc 1 T08BIT 1 0 :1:6 
+`uc 1 TMR0ON 1 0 :1:7 
+]
+"13830
+[s S770 . 1 `uc 1 T0PS0 1 0 :1:0 
+`uc 1 T0PS1 1 0 :1:1 
+`uc 1 T0PS2 1 0 :1:2 
+]
+[u S774 . 1 `S763 1 . 1 0 `S770 1 . 1 0 ]
+[v _T0CONbits T0CONbits `VES774  1 e 1 @4053 ]
+"13887
+[v _TMR0L TMR0L `VEuc  1 e 1 @4054 ]
+"13894
+[v _TMR0H TMR0H `VEuc  1 e 1 @4055 ]
+[s S791 . 1 `uc 1 RBIF 1 0 :1:0 
+`uc 1 INT0IF 1 0 :1:1 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 RBIE 1 0 :1:3 
+`uc 1 INT0IE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+`uc 1 PEIE_GIEL 1 0 :1:6 
+`uc 1 GIE_GIEH 1 0 :1:7 
+]
+"14385
+[s S800 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 INT0F 1 0 :1:1 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 INT0E 1 0 :1:4 
+`uc 1 T0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+[s S809 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 GIEL 1 0 :1:6 
+`uc 1 GIEH 1 0 :1:7 
+]
+[u S813 . 1 `S791 1 . 1 0 `S800 1 . 1 0 `S809 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES813  1 e 1 @4082 ]
+"17511
+[v _TMR0ON TMR0ON `VEb  1 e 0 @32431 ]
+"118 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\doprnt.c
+[v _prec prec `i  1 s 2 prec ]
+[v _width width `i  1 s 2 width ]
+"119
+[v _flags flags `uc  1 s 1 flags ]
+"144
+[v _dbuf dbuf `[32]uc  1 s 32 dbuf ]
+"7 C:\Users\sylva\Desktop\CoursHES\CommunicationUP\modbus\modbus_proj.X\crc.c
+[v _auchCRCHi auchCRCHi `C[256]uc  1 e 256 0 ]
+"27
+[v _auchCRCLo auchCRCLo `C[256]uc  1 e 256 0 ]
+"49 C:\Users\sylva\Desktop\CoursHES\CommunicationUP\modbus\modbus_proj.X\main.c
+[v _offset offset `us  1 e 2 0 ]
+"62 C:\Users\sylva\Desktop\CoursHES\CommunicationUP\modbus\modbus_proj.X\mcc_generated_files/eusart1.c
+[v _eusart1TxHead eusart1TxHead `VEuc  1 e 1 0 ]
+"63
+[v _eusart1TxTail eusart1TxTail `VEuc  1 e 1 0 ]
+"64
+[v _eusart1TxBuffer eusart1TxBuffer `VE[8]uc  1 e 8 0 ]
+"65
+[v _eusart1TxBufferRemaining eusart1TxBufferRemaining `VEuc  1 e 1 0 ]
+"67
+[v _eusart1RxHead eusart1RxHead `VEuc  1 e 1 0 ]
+"68
+[v _eusart1RxTail eusart1RxTail `VEuc  1 e 1 0 ]
+"69
+[v _eusart1RxBuffer eusart1RxBuffer `VE[8]uc  1 e 8 0 ]
+[s S429 . 1 `uc 1 perr 1 0 :1:0 
+`uc 1 ferr 1 0 :1:1 
+`uc 1 oerr 1 0 :1:2 
+`uc 1 reserved 1 0 :5:3 
+]
+"70
+[u S434 . 1 `S429 1 . 1 0 `uc 1 status 1 0 ]
+[v _eusart1RxStatusBuffer eusart1RxStatusBuffer `VE[8]S434  1 e 8 0 ]
+"71
+[v _eusart1RxCount eusart1RxCount `VEuc  1 e 1 0 ]
+"72
+[v _eusart1RxLastError eusart1RxLastError `VES434  1 e 1 0 ]
+"77
+[v _EUSART1_TxDefaultInterruptHandler EUSART1_TxDefaultInterruptHandler `*.38(v  1 e 3 0 ]
+"78
+[v _EUSART1_RxDefaultInterruptHandler EUSART1_RxDefaultInterruptHandler `*.38(v  1 e 3 0 ]
+"80
+[v _EUSART1_FramingErrorHandler EUSART1_FramingErrorHandler `*.38(v  1 e 3 0 ]
+"81
+[v _EUSART1_OverrunErrorHandler EUSART1_OverrunErrorHandler `*.38(v  1 e 3 0 ]
+"82
+[v _EUSART1_ErrorHandler EUSART1_ErrorHandler `*.38(v  1 e 3 0 ]
+"58 C:\Users\sylva\Desktop\CoursHES\CommunicationUP\modbus\modbus_proj.X\mcc_generated_files/tmr0.c
+[v _TMR0_InterruptHandler TMR0_InterruptHandler `*.38(v  1 e 3 0 ]
+"60
+[v _timer0ReloadVal timer0ReloadVal `VEus  1 e 2 0 ]
+"14 C:\Users\sylva\Desktop\CoursHES\CommunicationUP\modbus\modbus_proj.X\modbus.c
+[v _input_registers input_registers `[2]us  1 e 4 0 ]
+"15
+[v _holding_registers holding_registers `[2]us  1 e 4 0 ]
+"27
+[v _rx_buf rx_buf `[256]uc  1 e 256 0 ]
+"28
+[v _tx_buf tx_buf `[256]uc  1 e 256 0 ]
+"29
+[v _index index `uc  1 e 1 0 ]
+"51 C:\Users\sylva\Desktop\CoursHES\CommunicationUP\modbus\modbus_proj.X\main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"64
+[v main@tempString tempString `[20]uc  1 a 20 0 ]
+"84
+} 0
+"9 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\nf_sprintf.c
+[v _sprintf sprintf `(i  1 e 2 0 ]
+{
+[u S1630 . 3 `*.2uc 1 buffer 3 0 `*.2Cuc 1 source 3 0 ]
+"13
+[s S1633 _IO_FILE 12 `S1630 1 . 3 0 `i 1 count 2 3 `[3]uc 1 ungetbuf 3 5 `i 1 ungetcnt 2 8 `i 1 limit 2 10 ]
+[v sprintf@f f `S1633  1 a 12 72 ]
+"12
+[v sprintf@ap ap `[1]*.39v  1 a 2 70 ]
+"9
+[v sprintf@s s `*.39uc  1 p 2 64 ]
+[v sprintf@fmt fmt `*.32Cuc  1 p 2 66 ]
+"23
+} 0
+"1546 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\doprnt.c
+[v _vfprintf vfprintf `(i  1 e 2 0 ]
+{
+"1549
+[v vfprintf@cfmt cfmt `*.32uc  1 a 2 62 ]
+[s S1665 _IO_FILE 0 ]
+"1546
+[v vfprintf@fp fp `*.39S1665  1 p 2 56 ]
+[v vfprintf@fmt fmt `*.32Cuc  1 p 2 58 ]
+[v vfprintf@ap ap `*.39*.39v  1 p 2 60 ]
+"1569
+} 0
+"1048
+[v _vfpfcnvrt vfpfcnvrt `(v  1 s 1 vfpfcnvrt ]
+{
+[u S1689 . 4 `i 1 sint 2 0 `ui 1 uint 2 0 `*.2v 1 vp 3 0 `d 1 f 4 0 ]
+"1059
+[v vfpfcnvrt@convarg convarg `S1689  1 a 4 48 ]
+"1050
+[v vfpfcnvrt@cp cp `*.32uc  1 a 2 54 ]
+"1051
+[v vfpfcnvrt@done done `i  1 a 2 52 ]
+[s S1665 _IO_FILE 0 ]
+"1048
+[v vfpfcnvrt@fp fp `*.39S1665  1 p 2 40 ]
+[v vfpfcnvrt@fmt fmt `*.39*.32uc  1 p 2 42 ]
+[v vfpfcnvrt@ap ap `*.39*.39v  1 p 2 44 ]
+"1543
+} 0
+"1029
+[v _read_prec_or_width read_prec_or_width `(i  1 s 2 read_prec_or_width ]
+{
+"1035
+[v read_prec_or_width@c c `uc  1 a 1 12 ]
+"1030
+[v read_prec_or_width@n n `i  1 a 2 13 ]
+"1029
+[v read_prec_or_width@fmt fmt `*.39*.32Cuc  1 p 2 6 ]
+[v read_prec_or_width@ap ap `*.39[1]*.39v  1 p 2 8 ]
+"1042
+} 0
+"15 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+{
+"17
+[v ___wmul@product product `ui  1 a 2 4 ]
+"15
+[v ___wmul@multiplier multiplier `ui  1 p 2 0 ]
+[v ___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
+"53
+} 0
+"470 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\doprnt.c
+[v _dtoa dtoa `(v  1 s 1 dtoa ]
+{
+"473
+[v dtoa@i i `i  1 a 2 38 ]
+[v dtoa@w w `i  1 a 2 35 ]
+[v dtoa@p p `i  1 a 2 33 ]
+"472
+[v dtoa@s s `uc  1 a 1 37 ]
+[s S1665 _IO_FILE 0 ]
+"470
+[v dtoa@fp fp `*.39S1665  1 p 2 27 ]
+[v dtoa@d d `i  1 p 2 29 ]
+"527
+} 0
+"152
+[v _pad pad `(v  1 s 1 pad ]
+{
+"154
+[v pad@w w `i  1 a 2 25 ]
+[v pad@i i `i  1 a 2 23 ]
+[s S1665 _IO_FILE 0 ]
+"152
+[v pad@fp fp `*.39S1665  1 p 2 16 ]
+[v pad@buf buf `*.39uc  1 p 2 18 ]
+[v pad@p p `i  1 p 2 20 ]
+"183
+} 0
+"8 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\nf_fputs.c
+[v _fputs fputs `(i  1 e 2 0 ]
+{
+"11
+[v fputs@i i `i  1 a 2 14 ]
+"10
+[v fputs@c c `uc  1 a 1 13 ]
+"8
+[v fputs@s s `*.39Cuc  1 p 2 9 ]
+[u S1630 . 3 `*.2uc 1 buffer 3 0 `*.2Cuc 1 source 3 0 ]
+[s S1633 _IO_FILE 12 `S1630 1 . 3 0 `i 1 count 2 3 `[3]uc 1 ungetbuf 3 5 `i 1 ungetcnt 2 8 `i 1 limit 2 10 ]
+[v fputs@fp fp `*.39S1633  1 p 2 11 ]
+"19
+} 0
+"8 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\nf_fputc.c
+[v _fputc fputc `(i  1 e 2 0 ]
+{
+[v fputc@c c `i  1 p 2 0 ]
+[u S1630 . 3 `*.2uc 1 buffer 3 0 `*.2Cuc 1 source 3 0 ]
+[s S1633 _IO_FILE 12 `S1630 1 . 3 0 `i 1 count 2 3 `[3]uc 1 ungetbuf 3 5 `i 1 ungetcnt 2 8 `i 1 limit 2 10 ]
+[v fputc@fp fp `*.39S1633  1 p 2 2 ]
+"24
+} 0
+"7 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\putch.c
+[v _putch putch `(v  1 e 1 0 ]
+{
+"9
+} 0
+"1 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\abs.c
+[v _abs abs `(i  1 e 2 0 ]
+{
+[v abs@a a `i  1 p 2 6 ]
+"4
+} 0
+"7 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+{
+"10
+[v ___awmod@sign sign `uc  1 a 1 5 ]
+[v ___awmod@counter counter `uc  1 a 1 4 ]
+"7
+[v ___awmod@dividend dividend `i  1 p 2 0 ]
+[v ___awmod@divisor divisor `i  1 p 2 2 ]
+"34
+} 0
+"7 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+{
+"10
+[v ___awdiv@quotient quotient `i  1 a 2 6 ]
+"11
+[v ___awdiv@sign sign `uc  1 a 1 5 ]
+[v ___awdiv@counter counter `uc  1 a 1 4 ]
+"7
+[v ___awdiv@dividend dividend `i  1 p 2 0 ]
+[v ___awdiv@divisor divisor `i  1 p 2 2 ]
+"41
+} 0
+"18 C:\Users\sylva\Desktop\CoursHES\CommunicationUP\modbus\modbus_proj.X\measure.c
+[v _measure_voltage measure_voltage `(us  1 e 2 0 ]
+{
+"23
+[v measure_voltage@i i `i  1 a 2 32 ]
+"21
+[v measure_voltage@result result `ul  1 a 4 28 ]
+"30
+} 0
+"32
+[v _measure_current measure_current `(us  1 e 2 0 ]
+{
+"37
+[v measure_current@i i `i  1 a 2 31 ]
+"35
+[v measure_current@result result `ul  1 a 4 33 ]
+"32
+[v measure_current@offset offset `us  1 p 2 25 ]
+"58
+} 0
+"15 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+{
+"17
+[v ___lmul@product product `ul  1 a 4 8 ]
+"15
+[v ___lmul@multiplier multiplier `ul  1 p 4 0 ]
+[v ___lmul@multiplicand multiplicand `ul  1 p 4 4 ]
+"129
+} 0
+"7 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\__lldiv.c
+[v ___lldiv __lldiv `(ul  1 e 4 0 ]
+{
+"10
+[v ___lldiv@quotient quotient `ul  1 a 4 20 ]
+"11
+[v ___lldiv@counter counter `uc  1 a 1 24 ]
+"7
+[v ___lldiv@dividend dividend `ul  1 p 4 12 ]
+[v ___lldiv@divisor divisor `ul  1 p 4 16 ]
+"30
+} 0
+"109 C:\Users\sylva\Desktop\CoursHES\CommunicationUP\modbus\modbus_proj.X\mcc_generated_files/adc.c
+[v _ADC_GetConversion ADC_GetConversion `(us  1 e 2 0 ]
+{
+[v ADC_GetConversion@channel channel `E4918  1 a 1 wreg ]
+[v ADC_GetConversion@channel channel `E4918  1 a 1 wreg ]
+"112
+[v ADC_GetConversion@channel channel `E4918  1 a 1 4 ]
+"127
+} 0
+"50 C:\Users\sylva\Desktop\CoursHES\CommunicationUP\modbus\modbus_proj.X\mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+{
+"61
+} 0
+"62 C:\Users\sylva\Desktop\CoursHES\CommunicationUP\modbus\modbus_proj.X\mcc_generated_files/tmr2.c
+[v _TMR2_Initialize TMR2_Initialize `(v  1 e 1 0 ]
+{
+"77
+} 0
+"67 C:\Users\sylva\Desktop\CoursHES\CommunicationUP\modbus\modbus_proj.X\mcc_generated_files/tmr0.c
+[v _TMR0_Initialize TMR0_Initialize `(v  1 e 1 0 ]
+{
+"95
+} 0
+"156
+[v _TMR0_SetInterruptHandler TMR0_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v TMR0_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 0 ]
+"158
+} 0
+"50 C:\Users\sylva\Desktop\CoursHES\CommunicationUP\modbus\modbus_proj.X\mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+{
+"88
+} 0
+"63 C:\Users\sylva\Desktop\CoursHES\CommunicationUP\modbus\modbus_proj.X\mcc_generated_files/mcc.c
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+{
+"69
+} 0
+"52 C:\Users\sylva\Desktop\CoursHES\CommunicationUP\modbus\modbus_proj.X\mcc_generated_files/interrupt_manager.c
+[v _INTERRUPT_Initialize INTERRUPT_Initialize `(v  1 e 1 0 ]
+{
+"56
+} 0
+"88 C:\Users\sylva\Desktop\CoursHES\CommunicationUP\modbus\modbus_proj.X\mcc_generated_files/eusart1.c
+[v _EUSART1_Initialize EUSART1_Initialize `(v  1 e 1 0 ]
+{
+"130
+} 0
+"276
+[v _EUSART1_SetTxInterruptHandler EUSART1_SetTxInterruptHandler `(v  1 e 1 0 ]
+{
+[v EUSART1_SetTxInterruptHandler@interruptHandler interruptHandler `*.38(v  1 p 3 0 ]
+"278
+} 0
+"280
+[v _EUSART1_SetRxInterruptHandler EUSART1_SetRxInterruptHandler `(v  1 e 1 0 ]
+{
+[v EUSART1_SetRxInterruptHandler@interruptHandler interruptHandler `*.38(v  1 p 3 0 ]
+"282
+} 0
+"268
+[v _EUSART1_SetOverrunErrorHandler EUSART1_SetOverrunErrorHandler `(v  1 e 1 0 ]
+{
+[v EUSART1_SetOverrunErrorHandler@interruptHandler interruptHandler `*.38(v  1 p 3 0 ]
+"270
+} 0
+"264
+[v _EUSART1_SetFramingErrorHandler EUSART1_SetFramingErrorHandler `(v  1 e 1 0 ]
+{
+[v EUSART1_SetFramingErrorHandler@interruptHandler interruptHandler `*.38(v  1 p 3 0 ]
+"266
+} 0
+"272
+[v _EUSART1_SetErrorHandler EUSART1_SetErrorHandler `(v  1 e 1 0 ]
+{
+[v EUSART1_SetErrorHandler@interruptHandler interruptHandler `*.38(v  1 p 3 0 ]
+"274
+} 0
+"64 C:\Users\sylva\Desktop\CoursHES\CommunicationUP\modbus\modbus_proj.X\mcc_generated_files/epwm1.c
+[v _EPWM1_Initialize EPWM1_Initialize `(v  1 e 1 0 ]
+{
+"83
+} 0
+"61 C:\Users\sylva\Desktop\CoursHES\CommunicationUP\modbus\modbus_proj.X\mcc_generated_files/adc.c
+[v _ADC_Initialize ADC_Initialize `(v  1 e 1 0 ]
+{
+"80
+} 0
+"17 C:\Users\sylva\Desktop\CoursHES\CommunicationUP\modbus\modbus_proj.X\lcd/lcd.c
+[v _Lcd_Init Lcd_Init `(c  1 e 1 0 ]
+{
+"40
+} 0
+"74
+[v _LCD_2x16_WriteMsg LCD_2x16_WriteMsg `(v  1 e 1 0 ]
+{
+[v LCD_2x16_WriteMsg@msg msg `*.39uc  1 p 2 2 ]
+[v LCD_2x16_WriteMsg@line line `uc  1 p 1 4 ]
+"82
+} 0
+"58
+[v _LCD_2x16_WriteData LCD_2x16_WriteData `(v  1 e 1 0 ]
+{
+[v LCD_2x16_WriteData@command command `uc  1 a 1 wreg ]
+[v LCD_2x16_WriteData@command command `uc  1 a 1 wreg ]
+"60
+[v LCD_2x16_WriteData@command command `uc  1 a 1 1 ]
+"72
+} 0
+"43
+[v _LCD_2x16_WriteCmd LCD_2x16_WriteCmd `(v  1 e 1 0 ]
+{
+[v LCD_2x16_WriteCmd@command command `uc  1 a 1 wreg ]
+[v LCD_2x16_WriteCmd@command command `uc  1 a 1 wreg ]
+"45
+[v LCD_2x16_WriteCmd@command command `uc  1 a 1 1 ]
+"57
+} 0
+"85 C:\Users\sylva\Desktop\CoursHES\CommunicationUP\modbus\modbus_proj.X\mcc_generated_files/epwm1.c
+[v _EPWM1_LoadDutyValue EPWM1_LoadDutyValue `(v  1 e 1 0 ]
+{
+[v EPWM1_LoadDutyValue@dutyValue dutyValue `us  1 p 2 0 ]
+"92
+} 0
+"58 C:\Users\sylva\Desktop\CoursHES\CommunicationUP\modbus\modbus_proj.X\mcc_generated_files/interrupt_manager.c
+[v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `IIH(v  1 e 1 0 ]
+{
+"90
+} 0
+"33 C:\Users\sylva\Desktop\CoursHES\CommunicationUP\modbus\modbus_proj.X\modbus.c
+[v _modbus_timer modbus_timer `(v  1 e 1 0 ]
+{
+"37
+} 0
+"136
+[v _modbus_send modbus_send `(v  1 e 1 0 ]
+{
+[v modbus_send@length length `uc  1 a 1 wreg ]
+"139
+[v modbus_send@i i `i  1 a 2 5 ]
+"136
+[v modbus_send@length length `uc  1 a 1 wreg ]
+"139
+[v modbus_send@length length `uc  1 a 1 4 ]
+"143
+} 0
+"173 C:\Users\sylva\Desktop\CoursHES\CommunicationUP\modbus\modbus_proj.X\mcc_generated_files/eusart1.c
+[v _EUSART1_Write EUSART1_Write `(v  1 e 1 0 ]
+{
+[v EUSART1_Write@txData txData `uc  1 a 1 wreg ]
+[v EUSART1_Write@txData txData `uc  1 a 1 wreg ]
+[v EUSART1_Write@txData txData `uc  1 a 1 0 ]
+"194
+} 0
+"39 C:\Users\sylva\Desktop\CoursHES\CommunicationUP\modbus\modbus_proj.X\modbus.c
+[v _modbus_analyse_and_answer modbus_analyse_and_answer `(uc  1 e 1 0 ]
+{
+"117
+[v modbus_analyse_and_answer@i_1186 i `i  1 a 2 18 ]
+"84
+[v modbus_analyse_and_answer@i i `i  1 a 2 22 ]
+"60
+[v modbus_analyse_and_answer@nbofRegister nbofRegister `us  1 a 2 26 ]
+"59
+[v modbus_analyse_and_answer@startingAddress startingAddress `us  1 a 2 24 ]
+"61
+[v modbus_analyse_and_answer@pwmValue pwmValue `us  1 a 2 16 ]
+"57
+[v modbus_analyse_and_answer@functionCode functionCode `uc  1 a 1 15 ]
+"45
+[v modbus_analyse_and_answer@crc crc `us  1 a 2 20 ]
+"49
+[v modbus_analyse_and_answer@crcAtt crcAtt `us  1 a 2 13 ]
+"127
+} 0
+"48 C:\Users\sylva\Desktop\CoursHES\CommunicationUP\modbus\modbus_proj.X\crc.c
+[v _CRC16 CRC16 `(us  1 e 2 0 ]
+{
+"51
+[v CRC16@uchCRCLo uchCRCLo `uc  1 a 1 8 ]
+"50
+[v CRC16@uchCRCHi uchCRCHi `uc  1 a 1 7 ]
+"52
+[v CRC16@uIndex uIndex `uc  1 a 1 6 ]
+"48
+[v CRC16@msg msg `*.39Cuc  1 p 2 0 ]
+[v CRC16@length length `us  1 p 2 2 ]
+"60
+} 0
+"129 C:\Users\sylva\Desktop\CoursHES\CommunicationUP\modbus\modbus_proj.X\modbus.c
+[v _modbus_char_recvd modbus_char_recvd `(v  1 e 1 0 ]
+{
+[v modbus_char_recvd@c c `uc  1 a 1 wreg ]
+[v modbus_char_recvd@c c `uc  1 a 1 wreg ]
+"131
+[v modbus_char_recvd@c c `uc  1 a 1 0 ]
+"134
+} 0
+"129 C:\Users\sylva\Desktop\CoursHES\CommunicationUP\modbus\modbus_proj.X\mcc_generated_files/tmr0.c
+[v _TMR0_Reload TMR0_Reload `(v  1 e 1 0 ]
+{
+"134
+} 0
+"136
+[v _TMR0_ISR TMR0_ISR `(v  1 e 1 0 ]
+{
+"153
+} 0
+"160
+[v _TMR0_DefaultInterruptHandler TMR0_DefaultInterruptHandler `(v  1 e 1 0 ]
+{
+"163
+} 0
+"197 C:\Users\sylva\Desktop\CoursHES\CommunicationUP\modbus\modbus_proj.X\mcc_generated_files/eusart1.c
+[v _EUSART1_Transmit_ISR EUSART1_Transmit_ISR `(v  1 e 1 0 ]
+{
+"214
+} 0
+"216
+[v _EUSART1_Receive_ISR EUSART1_Receive_ISR `(v  1 e 1 0 ]
+{
+"238
+} 0
+"252
+[v _EUSART1_DefaultOverrunErrorHandler EUSART1_DefaultOverrunErrorHandler `(v  1 e 1 0 ]
+{
+"258
+} 0
+"250
+[v _EUSART1_DefaultFramingErrorHandler EUSART1_DefaultFramingErrorHandler `(v  1 e 1 0 ]
+{
+} 0
+"260
+[v _EUSART1_DefaultErrorHandler EUSART1_DefaultErrorHandler `(v  1 e 1 0 ]
+{
+"262
+} 0
+"240
+[v _EUSART1_RxDataHandler EUSART1_RxDataHandler `(v  1 e 1 0 ]
+{
+"248
+} 0

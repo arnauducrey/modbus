@@ -53,38 +53,29 @@ void main(void)
     // Initialize the device
     SYSTEM_Initialize();
 
-    // If using interrupts in PIC18 High/Low Priority Mode you need to enable the Global High and Low Interrupts
-    // If using interrupts in PIC Mid-Range Compatibility Mode you need to enable the Global and Peripheral Interrupts
-    // Use the following macros to:
-
     // Enable the Global Interrupts
     INTERRUPT_GlobalInterruptEnable();
-
-    // Disable the Global Interrupts
-    //INTERRUPT_GlobalInterruptDisable();
-
     // Enable the Peripheral Interrupts
     INTERRUPT_PeripheralInterruptEnable();
 
-    // Disable the Peripheral Interrupts
-    //INTERRUPT_PeripheralInterruptDisable();
-    
-    
     holding_registers[1] = 0x80; // set of the address (default value)
-    EPWM1_LoadDutyValue(0); // set duty cycle to 0% in order to measure the offset current
-    
-    
+
     //Configure the LCD to display current and voltage 
     char tempString[20];
     Lcd_Init();
-    __delay_ms(10);
-    offset = measure_current(0);
+    
+     EPWM1_LoadDutyValue(0); // set duty cycle to 0% 
+    __delay_ms(10); // small delay to wait for pwm update
+    offset = measure_current(0); // get the offset current
+    
     while (1)
     {          
          input_registers[0] = measure_voltage(); // load voltage in register
          input_registers[1] = measure_current(offset); // load current in register
          EPWM1_LoadDutyValue(holding_registers[0]); //control duty cycle
-         //Diplay on the screen
+         
+         
+         //Diplay values on the lcd screen
          sprintf(tempString,"U = %03d[mV]",input_registers[0]);
          LCD_2x16_WriteMsg(tempString,0);
          sprintf(tempString,"I = %04d[uA]",input_registers[1]);

@@ -58,12 +58,12 @@ void  INTERRUPT_Initialize (void)
 void __interrupt() INTERRUPT_InterruptManager (void)
 {
     // interrupt handler
-    if(INTCONbits.TMR0IE == 1 && INTCONbits.TMR0IF == 1)
+    
+    if(INTCONbits.TMR0IE == 1 && INTCONbits.TMR0IF == 1)// timer 0 interrupt, occurs when a full message is received
     {
-        // end of frame
         TMR0_ISR(); // Reset timer
-        TMR0ON = 0; // stop the timer
-        modbus_timer(); //treat the frame
+        TMR0ON = 0; // stop the timer 
+        modbus_timer(); //treat the message
     }
     else if(INTCONbits.PEIE == 1)
     {
@@ -71,12 +71,12 @@ void __interrupt() INTERRUPT_InterruptManager (void)
         {
             EUSART1_TxDefaultInterruptHandler();
         } 
-        else if(PIE1bits.RC1IE == 1 && PIR1bits.RC1IF == 1)
+        else if(PIE1bits.RC1IE == 1 && PIR1bits.RC1IF == 1)// this interrupt occurs when a byte is received
         {
             EUSART1_RxDefaultInterruptHandler();
-            modbus_char_recvd(RCREG1); // read the char
+            modbus_char_recvd(RCREG1); // treat the byte
             TMR0_Reload(); // Reset timer 0
-            TMR0ON = 1;
+            TMR0ON = 1; // reactivate timer 0
         } 
         else
         {
